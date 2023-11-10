@@ -1199,6 +1199,11 @@ html {
   margin-left: auto;
   gap: 20px;
 }
+@media (max-width: 575.98px) {
+  .top-act {
+    margin-left: 0;
+  }
+}
 .top-act__group {
   gap: 20px;
   min-width: 50px;

@@ -66,6 +66,12 @@
     margin-left: auto;
     gap: 20px;  
 
+    @include abstracts.breakpoint(sm) {
+       margin-left: 0;
+    }  
+
+
+
     &__group {
         @extend %itemFlexCenter;
         gap: 20px;
