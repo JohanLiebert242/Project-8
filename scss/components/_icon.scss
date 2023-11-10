@@ -1,0 +1,7 @@
+@use "../theme";
+@use "../layouts";
+
+
+.icon {
+    filter: var(--icon-color);
+}

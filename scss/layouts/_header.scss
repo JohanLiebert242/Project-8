@@ -1,0 +1,132 @@
+@use "../theme";
+@use "../abstracts";
+
+%itemFlexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.drawer {
+    display: none;
+
+    @include abstracts.breakpoint(lg) {
+        margin-right: 39px;
+        display: block;
+    }
+    
+}
+
+.header {
+    padding: 30px 0;
+    background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(sm) {
+        padding: 16px 0;
+    }  
+}
+
+.top-bar {
+    @extend %itemFlexCenter;
+}
+
+.navbar {
+    margin-left: 144px;
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 50px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+
+    &__list {
+        @extend %itemFlexCenter;
+        gap: 30px;
+    }
+
+    &__link {
+        @extend %itemFlexCenter;
+        gap: 6px;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--top-act-text-color);
+    }
+    
+    &__icon {
+        margin-top: 3px;
+        filter: var(--icon-color);
+    }
+}
+
+.top-act {
+    @extend %itemFlexCenter;
+    margin-left: auto;
+    gap: 20px;  
+
+    &__group {
+        @extend %itemFlexCenter;
+        gap: 20px;
+
+        min-width: 50px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: var(--top-act__group-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--top-act__btn-shadow);
+
+            @include abstracts.breakpoint(sm) {
+                display: none;
+            }  
+    }
+
+    &__group--search {
+        @extend %itemFlexCenter;
+        justify-content: center;
+        padding: 13px;
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        } 
+    }
+
+    &__group >  &__btn--favortie {
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }  
+    }
+
+    &__btn {
+        @extend %itemFlexCenter;
+        gap: 10px;
+
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color:  var(--top-act-text-color);
+    }
+
+    &__seperate {
+        width: 1px;
+        height: 30px;
+        background: #EDEDF6;
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        } 
+    }
+
+
+    &__avatar {
+        display: block;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    }
+}
