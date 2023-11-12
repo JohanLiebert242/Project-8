@@ -31,7 +31,7 @@
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 129px;
 
     @include abstracts.breakpoint(xl) {
         margin-left: 50px;
@@ -51,11 +51,6 @@
             opacity: 1;
             visibility: visible;
             transition: opacity .5s linear;
-        }
-
-        &:first-child a {
-            padding-left: 0;
-            padding-right: 0;   
         }
     }
 

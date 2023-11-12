@@ -32,13 +32,14 @@
 
 .top-menu {
     --top-menu__main-width: 292px;
+    --max-inner-height: min(582px, calc(100vh - 150px ) - var(--inner-padding) * 2 );
 
     position: relative;
     @extend %itemFlexCenter;
 
    &__main {
         width: var(--top-menu__main-width);
-        height: min(582px, calc(100vh - 150px ) - var(--inner-padding) * 2 );
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu__border-color);
         overflow-y: auto;
    }
@@ -120,4 +121,14 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--inner-padding);
     overflow-y: auto;
+
+    &--not-main {
+        width: 100%;
+        height: var(--max-inner-height);
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-y: auto;
+    }
 }

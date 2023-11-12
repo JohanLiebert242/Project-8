@@ -111,7 +111,7 @@ html {
 }
 
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
 }
 @media (max-width: 1199.98px) {
   .navbar {
@@ -127,10 +127,6 @@ html {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s linear;
-}
-.navbar__item:first-child a {
-  padding-left: 0;
-  padding-right: 0;
 }
 .navbar__link {
   gap: 6px;
@@ -1358,11 +1354,12 @@ a {
 
 .top-menu {
   --top-menu__main-width: 292px;
+  --max-inner-height: min(582px, calc(100vh - 150px ) - var(--inner-padding) * 2 );
   position: relative;
 }
 .top-menu__main {
   width: var(--top-menu__main-width);
-  height: min(582px, 100vh - 150px - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu__border-color);
   overflow-y: auto;
 }
@@ -1428,6 +1425,15 @@ a {
   display: none;
   grid-template-columns: repeat(3, 1fr);
   column-gap: var(--inner-padding);
+  overflow-y: auto;
+}
+.sub-menu--not-main {
+  width: 100%;
+  height: var(--max-inner-height);
+  position: initial;
+  inset: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   overflow-y: auto;
 }
 
