@@ -1,0 +1,123 @@
+@use "../layouts";
+@use "../theme";
+@use "../abstracts";
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 50px;
+    width: min(1240px, 100%);
+    opacity: 0;
+    visibility: hidden;
+
+    &__inner {
+        --inner-padding: 30px;
+        position: relative;
+        
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background: var(--dropdown__inner-bg);
+        box-shadow: 0px 40px 90px 20px var(--dropdown__shadow);
+
+        &::before {
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            content: url("../icons/dropdown-arrow.svg");
+            translate: -50%;
+            filter: var(--dropdown-arrow);
+        }
+    }
+}
+
+.top-menu {
+    --top-menu__main-width: 292px;
+
+    position: relative;
+    @extend %itemFlexCenter;
+
+   &__main {
+        width: var(--top-menu__main-width);
+        height: min(582px, calc(100vh - 150px ) - var(--inner-padding) * 2 );
+        border-right: 1px solid var(--top-menu__border-color);
+        overflow-y: auto;
+   }
+}
+
+.menu-column {
+    display: flex;
+    gap: 15px;
+
+    + .menu-column {
+        margin-top: 30px;
+    }
+
+    &__icons {
+        position: relative;
+
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+
+        &--circle {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        &--square {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+    }
+
+    &__content {
+        flex: 1;
+
+        &--heading {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 19px;
+            margin-top: 5px;
+            color: var(--top-menu__text-color);
+        }
+
+        &--item {
+            padding: 7px 0;
+
+            &--active .sub-menu {
+                display: grid;
+            }
+
+        }
+
+        &--link {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+        color: var(--top-menu__text-color);
+        }
+
+        &--item--active > &--link,
+        &--item:hover > &--link {
+            color: #0071DC;
+            font-weight: 500;
+        }
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--top-menu__main-width);
+    padding-left: var(--inner-padding);
+    
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--inner-padding);
+    overflow-y: auto;
+}

@@ -13,7 +13,6 @@
         margin-right: 39px;
         display: block;
     }
-    
 }
 
 .header {
@@ -27,6 +26,8 @@
 
 .top-bar {
     @extend %itemFlexCenter;
+    position: relative;
+     
 }
 
 .navbar {
@@ -42,17 +43,33 @@
 
     &__list {
         @extend %itemFlexCenter;
-        gap: 30px;
+    }
+
+    &__item {
+        
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .5s linear;
+        }
+
+        &:first-child a {
+            padding-left: 0;
+            padding-right: 0;   
+        }
     }
 
     &__link {
         @extend %itemFlexCenter;
         gap: 6px;
+        height: 50px;
+        padding: 0 15px;
 
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
         color: var(--top-act-text-color);
+
     }
     
     &__icon {
