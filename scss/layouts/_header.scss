@@ -7,11 +7,8 @@
 }
 
 .drawer {
-    display: none;
-
     @include abstracts.breakpoint(lg) {
         margin-right: 39px;
-        display: block;
     }
 }
 
