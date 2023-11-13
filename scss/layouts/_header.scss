@@ -31,7 +31,7 @@
     margin-left: 129px;
 
     @include abstracts.breakpoint(xl) {
-        margin-left: 50px;
+        margin-left: 40px;
     }
 
     @include abstracts.breakpoint(lg) {
@@ -55,10 +55,7 @@
     }
 
     &__close-btn {
-        display: none;
-
         @include abstracts.breakpoint(lg) {
-            display: block;
             padding: 10px 40px;
         }
     }
@@ -82,23 +79,24 @@
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
+            overflow-y: auto;
+            height: calc(100% - 27px);
         }
     }
 
     &__item {
-        
         &:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity .5s linear;
+            display: block;
         }
 
         @include abstracts.breakpoint(lg) {
             width: 100%;
-
             &:hover .dropdown {
-                opacity: 0;
-                visibility: hidden;
+                display: none;
+            }
+
+            &--active:hover .dropdown {
+                display: block;
             }
         }
     }
@@ -124,6 +122,16 @@
     &__icon {
         margin-top: 3px;
         filter: var(--icon-color);
+
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: rotate 0.3s ease;
+        }
+        
+    }
+
+    &__item--active &__icon {
+        rotate: 0deg;
     }
 }
 
@@ -132,11 +140,9 @@
     margin-left: auto;
     gap: 20px;  
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
        margin-left: 0;
     }  
-
-
 
     &__group {
         @extend %itemFlexCenter;
@@ -147,26 +153,12 @@
         border-radius: 8px;
         background: var(--top-act__group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act__btn-shadow);
-
-            @include abstracts.breakpoint(sm) {
-                display: none;
-            }  
     }
 
     &__group--search {
         @extend %itemFlexCenter;
         justify-content: center;
         padding: 13px;
-
-        @include abstracts.breakpoint(md) {
-            display: none;
-        } 
-    }
-
-    &__group >  &__btn--favortie {
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }  
     }
 
     &__btn {
@@ -186,10 +178,6 @@
         width: 1px;
         height: 30px;
         background: #EDEDF6;
-
-        @include abstracts.breakpoint(md) {
-            display: none;
-        } 
     }
 
 

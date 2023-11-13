@@ -8,8 +8,13 @@
     left: 0;
     padding-top: 50px;
     width: min(1240px, 100%);
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+
+
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        padding-top: 0;
+    }
 
     &__inner {
         --inner-padding: 30px;
@@ -20,6 +25,14 @@
         background: var(--dropdown__inner-bg);
         box-shadow: 0px 40px 90px 20px var(--dropdown__shadow);
 
+        @include abstracts.breakpoint(lg) {
+            position: initial;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            padding: 0 40px;
+        }
+
         &::before {
             position: absolute;
             top: -13px;
@@ -27,6 +40,10 @@
             content: url("../icons/dropdown-arrow.svg");
             translate: -50%;
             filter: var(--dropdown-arrow);
+
+            @include abstracts.breakpoint(lg) {
+                content: none;
+            }
         }
     }
 }
@@ -43,6 +60,12 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu__border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            border-right: none;
+            width: 100%;
+            height: auto;
+        }
    }
 }
 
@@ -53,7 +76,7 @@
     + .menu-column {
         margin-top: 30px;
     }
-
+    
     &__icons {
         position: relative;
 
@@ -123,6 +146,15 @@
     column-gap: var(--inner-padding);
     overflow-y: auto;
 
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        inset:  0;
+        grid-template-columns: 1fr;
+        row-gap: var(--inner-padding);
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
     &--not-main {
         width: 100%;
         height: var(--max-inner-height);
@@ -131,5 +163,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg)  {
+            height: auto;
+            grid-template-columns: 1fr;
+        }
     }
 }

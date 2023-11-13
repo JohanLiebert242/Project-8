@@ -10,7 +10,7 @@
         gap: 10px;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin: 0 auto;
     }  
     
