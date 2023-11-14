@@ -16,4 +16,9 @@ html.dark {
 
     --top-menu__border-color: #171C28;
     --top-menu__text-color: #B9BABE;
+
+    //Navbar Responsive
+    --navbar-background-color-responsive: #292e39;
+    --navbar-text-responsive: #B9BABE;
+    --navbar__icon-responsive: brightness(0) saturate(100%) invert(91%) sepia(5%) saturate(176%) hue-rotate(191deg) brightness(84%) contrast(83%);
 }

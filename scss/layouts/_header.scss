@@ -38,7 +38,7 @@
         translate: -100%;
         position: fixed;
         inset: 0 50% 0 0;
-        background: #fff;
+        background: var(--navbar-background-color-responsive);
         margin-left: 0;
         padding: 20px 0;
         z-index: 9;
@@ -65,6 +65,7 @@
 
     &__close-btn {
         @include abstracts.breakpoint(lg) {
+            filter: var(--navbar__icon-responsive);
             padding: 10px 40px;
         }
 
@@ -97,11 +98,16 @@
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 150%;
+            color: var(--navbar-text-responsive);
 
             @include abstracts.breakpoint(sm) {
                 font-size: 1.5rem;
                 line-height: 147%;
             }
+        }
+
+        &--icon {
+            filter: var(--navbar__icon-responsive);
         }
     }
 
@@ -165,6 +171,7 @@
             justify-content: space-between;
             padding: 0 40px;
             gap: 0;
+            color: var(--navbar-text-responsive);
         }
 
         @include abstracts.breakpoint(sm) {
@@ -180,8 +187,7 @@
         @include abstracts.breakpoint(lg) {
             rotate: -90deg;
             transition: rotate 0.3s ease;
-        }
-        
+        } 
     }
 
     &__item--active &__icon {

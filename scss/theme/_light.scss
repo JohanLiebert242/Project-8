@@ -5,14 +5,23 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(10%) sepia(13%)
         saturate(2112%) hue-rotate(210deg) brightness(97%) contrast(100%);
 
+    // Top act
     --top-act__group-bg-color: #fff;
     --top-act-text-color: #1a162e;
     --top-act__btn-shadow: rgba(237, 237, 246, 0.2);
 
+
+    // Drop down
     --dropdown__inner-bg: #fff;
     --dropdown__shadow: rgba(200, 200, 200, 0.40);
     --dropdown-arrow: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(135deg) brightness(116%) contrast(100%);
 
+    
     --top-menu__border-color: #D2D1D6;
+
+    // Navbar responsive
+    --navbar-background-color-responsive: #fff;
+    --navbar-text-responsive: #1A162E;
+    --navbar__icon-responsive: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(135deg) brightness(116%) contrast(100%);
 
 }
