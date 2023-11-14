@@ -24,7 +24,7 @@
 .top-bar {
     @extend %itemFlexCenter;
     position: relative;
-     
+    z-index: 1;
 }
 
 .navbar {
