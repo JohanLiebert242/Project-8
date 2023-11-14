@@ -22,6 +22,7 @@ html {
     // Navbar responsive
     --navbar-background-color-responsive: #fff;
     --navbar-text-responsive: #1A162E;
-    --navbar__icon-responsive: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(135deg) brightness(116%) contrast(100%);
+    --navbar-shadow-responsive: rgba(200, 200, 200, 0.40);
+    --navbar__icon-responsive: filter: brightness(0) saturate(100%) invert(7%) sepia(41%) saturate(1283%) hue-rotate(215deg) brightness(98%) contrast(95%);
 
 }

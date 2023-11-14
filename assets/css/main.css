@@ -67,6 +67,7 @@ html.dark {
   --top-menu__text-color: #B9BABE;
   --navbar-background-color-responsive: #292e39;
   --navbar-text-responsive: #B9BABE;
+  --navbar-shadow-responsive: rgba(23, 28, 40, 0.40);
   --navbar__icon-responsive: brightness(0) saturate(100%) invert(91%) sepia(5%) saturate(176%) hue-rotate(191deg) brightness(84%) contrast(83%);
 }
 
@@ -84,7 +85,8 @@ html {
   --top-menu__border-color: #D2D1D6;
   --navbar-background-color-responsive: #fff;
   --navbar-text-responsive: #1A162E;
-  --navbar__icon-responsive: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(135deg) brightness(116%) contrast(100%);
+  --navbar-shadow-responsive: rgba(200, 200, 200, 0.40);
+  --navbar__icon-responsive: filter: brightness(0) saturate(100%) invert(7%) sepia(41%) saturate(1283%) hue-rotate(215deg) brightness(98%) contrast(95%);
 }
 
 .top-menu, .logo, .top-act__btn, .top-act__group--search, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -122,17 +124,19 @@ html {
 }
 @media (max-width: 991.98px) {
   .navbar {
-    translate: -100%;
     position: fixed;
     inset: 0 50% 0 0;
     background: var(--navbar-background-color-responsive);
     margin-left: 0;
     padding: 20px 0;
     z-index: 9;
+    border-radius: 0px 20px 20px 0px;
+    translate: -100%;
     transition: translate 0.5s ease;
   }
   .navbar.show {
     translate: 0;
+    box-shadow: 0px 40px 90px 20px var(--navbar-shadow-responsive);
   }
   .navbar.show ~ .navbar__overlay {
     opacity: 1;
@@ -146,7 +150,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .navbar {
-    inset: 0 10% 0 0;
+    inset: 0 20% 0 0;
     padding: 20px;
   }
 }
@@ -198,7 +202,13 @@ html {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 27px);
+    overscroll-behavior: contain;
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 140px);
   }
 }
 .navbar__overlay {
@@ -216,7 +226,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .navbar__overlay {
-    inset: 0 0 0 90%;
+    inset: 0 0 0 80%;
   }
 }
 .navbar__item:hover .dropdown {
@@ -252,6 +262,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .navbar__link {
+    height: 44px;
     padding: 0;
   }
 }

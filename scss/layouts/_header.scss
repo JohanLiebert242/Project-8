@@ -35,17 +35,21 @@
     }
 
     @include abstracts.breakpoint(lg) {
-        translate: -100%;
         position: fixed;
         inset: 0 50% 0 0;
+
         background: var(--navbar-background-color-responsive);
         margin-left: 0;
         padding: 20px 0;
         z-index: 9;
+        border-radius: 0px 20px 20px 0px;
+
+        translate: -100%;
         transition: translate .5s ease;
 
         &.show {
             translate: 0;
+            box-shadow: 0px 40px 90px 20px var(--navbar-shadow-responsive);
         }
 
         &.show ~ &__overlay {
@@ -59,7 +63,7 @@
     }
 
     @include abstracts.breakpoint(sm) {
-        inset: 0 10% 0 0;
+        inset: 0 20% 0 0;
         padding: 20px;
     }
 
@@ -117,8 +121,14 @@
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
+
             overflow-y: auto;
-            height: calc(100% - 27px);
+            overscroll-behavior: contain;
+            height: calc(100% - 40px);
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 140px);
         }
     }
 
@@ -135,7 +145,7 @@
         }
 
         @include abstracts.breakpoint(sm) {
-            inset: 0 0 0 90%;
+            inset: 0 0 0 80%;
         }
     }
 
@@ -175,6 +185,7 @@
         }
 
         @include abstracts.breakpoint(sm) {
+            height: 44px;
             padding: 0;
         }
 
