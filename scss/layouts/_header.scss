@@ -54,9 +54,65 @@
         }
     }
 
+    @include abstracts.breakpoint(md) {
+        inset: 0 40% 0 0;
+    }
+
+    @include abstracts.breakpoint(sm) {
+        inset: 0 10% 0 0;
+        padding: 20px;
+    }
+
     &__close-btn {
         @include abstracts.breakpoint(lg) {
             padding: 10px 40px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 0 10px 0;
+        }
+    }
+
+    &__act {
+        padding: 0 40px;
+        margin: 10px 0;
+        align-items: center;
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0;
+        }
+
+        &:nth-child(3) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+        }
+
+        &--title {
+            margin: 0 auto 0 16px;
+        }
+
+        &--title,
+        &--quantity {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+
+            @include abstracts.breakpoint(sm) {
+                font-size: 1.5rem;
+                line-height: 147%;
+            }
+        }
+    }
+
+    &__list {
+        @extend %itemFlexCenter;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: auto;
+            height: calc(100% - 27px);
         }
     }
 
@@ -71,16 +127,9 @@
             background: rgba($color: #000000, $alpha: 0.2);
             z-index: 8;
         }
-    }
 
-    &__list {
-        @extend %itemFlexCenter;
-
-        @include abstracts.breakpoint(lg) {
-            flex-direction: column;
-            align-items: flex-start;
-            overflow-y: auto;
-            height: calc(100% - 27px);
+        @include abstracts.breakpoint(sm) {
+            inset: 0 0 0 90%;
         }
     }
 
@@ -107,14 +156,19 @@
         height: 50px;
         padding: 0 15px;
 
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 500;
-        line-height: 146.667%;
+        line-height: 150%;
         color: var(--top-act-text-color);
 
         @include abstracts.breakpoint(lg) {
             justify-content: space-between;
             padding: 0 40px;
+            gap: 0;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0;
         }
 
     }

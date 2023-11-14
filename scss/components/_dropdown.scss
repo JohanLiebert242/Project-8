@@ -33,6 +33,10 @@
             padding: 0 40px;
         }
 
+        @include abstracts.breakpoint(sm) {
+            padding: 0;
+        }
+
         &::before {
             position: absolute;
             top: -13px;
@@ -152,7 +156,6 @@
         grid-template-columns: 1fr;
         row-gap: var(--inner-padding);
         margin-top: 20px;
-        padding-left: 0;
     }
 
     &--not-main {
