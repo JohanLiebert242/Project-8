@@ -5,7 +5,6 @@
     overflow: hidden;
     margin-top: 40px;
 
-
     &__inner {
         display: flex;
     }
@@ -17,9 +16,9 @@
         flex-shrink: 0;
         padding-top: 34%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
-        } 
+        }
 
         &-image {
             position: absolute;
@@ -49,10 +48,10 @@
         line-height: 144%;
         color: #fff;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 143%;
-        } 
+        }
     }
 
     &-slider {
@@ -74,9 +73,9 @@
             border: 4px solid #fff;
             border-radius: 50%;
 
-            @include abstracts.breakpoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 3px;
-            } 
+            }
         }
 
         &::before {
@@ -89,5 +88,4 @@
             translate: 93% -50%;
         }
     }
-    
 }

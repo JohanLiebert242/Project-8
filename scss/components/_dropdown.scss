@@ -10,8 +10,7 @@
     width: min(1240px, 100%);
     display: none;
 
-
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         padding-top: 0;
     }
@@ -19,13 +18,13 @@
     &__inner {
         --inner-padding: 30px;
         position: relative;
-        
+
         padding: var(--inner-padding);
         border-radius: 20px;
         background: var(--dropdown__inner-bg);
         box-shadow: 0px 40px 90px 20px var(--dropdown__shadow);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             position: initial;
             border-radius: 0;
             background: transparent;
@@ -33,7 +32,7 @@
             padding: 0 40px;
         }
 
-        @include abstracts.breakpoint(sm) {
+        @include abstracts.screen(sm) {
             padding: 0;
         }
 
@@ -45,7 +44,7 @@
             translate: -50%;
             filter: var(--dropdown-arrow);
 
-            @include abstracts.breakpoint(lg) {
+            @include abstracts.screen(lg) {
                 content: none;
             }
         }
@@ -54,23 +53,26 @@
 
 .top-menu {
     --top-menu__main-width: 292px;
-    --max-inner-height: min(582px, calc(100vh - 150px ) - var(--inner-padding) * 2 );
+    --max-inner-height: min(
+        582px,
+        calc(100vh - 150px) - var(--inner-padding) * 2
+    );
 
     position: relative;
     @extend %itemFlexCenter;
 
-   &__main {
+    &__main {
         width: var(--top-menu__main-width);
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu__border-color);
         overflow-y: auto;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             border-right: none;
             width: 100%;
             height: auto;
         }
-   }
+    }
 }
 
 .menu-column {
@@ -80,7 +82,7 @@
     + .menu-column {
         margin-top: 30px;
     }
-    
+
     &__icons {
         position: relative;
 
@@ -122,19 +124,18 @@
             &--active .sub-menu {
                 display: grid;
             }
-
         }
 
         &--link {
-        font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 142.857%;
-        color: var(--top-menu__text-color);
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 142.857%;
+            color: var(--top-menu__text-color);
         }
 
         &--item--active > &--link,
         &--item:hover > &--link {
-            color: #0071DC;
+            color: #0071dc;
             font-weight: 500;
         }
     }
@@ -144,15 +145,15 @@
     position: absolute;
     inset: 0 0 0 var(--top-menu__main-width);
     padding-left: var(--inner-padding);
-    
+
     display: none;
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--inner-padding);
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
-        inset:  0;
+        inset: 0;
         grid-template-columns: 1fr;
         row-gap: var(--inner-padding);
         margin-top: 20px;
@@ -167,7 +168,7 @@
         grid-template-columns: repeat(4, 1fr);
         overflow-y: auto;
 
-        @include abstracts.breakpoint(lg)  {
+        @include abstracts.screen(lg) {
             height: auto;
             grid-template-columns: 1fr;
         }
