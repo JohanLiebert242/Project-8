@@ -11,12 +11,12 @@ html {
     --top-act__btn-shadow: rgba(237, 237, 246, 0.2);
 
 
-    // Drop down
+    // Dropdown
     --dropdown__inner-bg: #fff;
     --dropdown__shadow: rgba(200, 200, 200, 0.40);
     --dropdown-arrow: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(0%) hue-rotate(135deg) brightness(116%) contrast(100%);
 
-    
+    //Top-menu
     --top-menu__border-color: #D2D1D6;
 
     // Navbar responsive
@@ -24,5 +24,26 @@ html {
     --navbar-text-responsive: #1A162E;
     --navbar-shadow-responsive: rgba(200, 200, 200, 0.40);
     --navbar__icon-responsive: filter: brightness(0) saturate(100%) invert(7%) sepia(41%) saturate(1283%) hue-rotate(215deg) brightness(98%) contrast(95%);
+
+    //Home
+    --home__heading-text-color: #1A162E;
+    --home__item-bg-color: #EEE;
+    --home__item-thumb-bg-color: #fff;
+    --home__item-name-color: #000000;
+    --home__item-desc-color: #1A162E;
+    --home__item-bg-responsive: #fff;
+
+
+    //Buttons
+    --filter-text-color: #6C6C72;
+    --filter-btn-bg-color: #fff;
+    --love-btn-bg-color: #fff;
+    --love-btn-shadow: rgba(124, 124, 124, 0.20); 
+
+    //Product items
+    --product-items-bg-color: #fff;
+    --product-items-shadow: rgba(237, 237, 246, 0.20);
+    --product-items-name-color: #1A162E;
+    --product-love-icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%) saturate(1446%) hue-rotate(210deg) brightness(91%) contrast(98%);
 
 }

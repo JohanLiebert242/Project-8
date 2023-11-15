@@ -4,16 +4,19 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
         saturate(2095%) hue-rotate(156deg) brightness(115%) contrast(110%);
 
+    //Top-act
     --top-act__group-bg-color: #292e39;
     --top-act-text-color: #fff;
     --top-act__btn-shadow: rgba(0, 0, 0, 0.2);
 
+    //Dropdown
     --dropdown__inner-bg: #292E39;
     --dropdown__shadow: rgba(23, 28, 40, 0.40);
     --dropdown-arrow: brightness(0) saturate(100%) invert(40%) sepia(14%) saturate(466%) hue-rotate(182deg) brightness(93%) contrast(93%);
 
     --body-bg-color: #292E39;
 
+    //Top-menu
     --top-menu__border-color: #171C28;
     --top-menu__text-color: #B9BABE;
 
@@ -22,4 +25,24 @@ html.dark {
     --navbar-text-responsive: #B9BABE;
     --navbar-shadow-responsive: rgba(23, 28, 40, 0.40);
     --navbar__icon-responsive: brightness(0) saturate(100%) invert(91%) sepia(5%) saturate(176%) hue-rotate(191deg) brightness(84%) contrast(83%);
+
+    //Home
+    --home__heading-text-color: #FFFFFF;
+    --home__item-bg-color: #171C28;
+    --home__item-thumb-bg-color: #292E39;
+    --home__item-name-color: #FFFFFF;
+    --home__item-desc-color: #FFFFFF;
+    --home__item-bg-responsive: #171C28;
+
+     //Buttons
+     --filter-text-color: #6C6C72;
+     --filter-btn-bg-color: #fff;
+     --love-btn-shadow: rgba(124, 124, 124, 0.20); 
+     --love-btn-bg-color: #292E39;
+
+    //Product items
+    --product-items-bg-color:#171C28;
+    --product-items-shadow: rgba(0, 0, 0, 0.20);
+    --product-items-text-color: #fff;
+    --product-love-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(348%) hue-rotate(202deg) brightness(117%) contrast(100%);
 }
