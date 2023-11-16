@@ -27,7 +27,7 @@
     background: var(--love-btn-bg-color);
     box-shadow: 0px 20px 60px var(--love-btn-shadow);
 
-    &:not(&--loved) .love-btn-loved__icon {
+    &:not(&--loved) &-loved__icon {
         display: none;
     }
 
