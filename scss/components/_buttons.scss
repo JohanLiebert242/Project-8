@@ -15,6 +15,7 @@
         line-height: 143%;
 }
 
+//Love btn
 .love-btn {
     display: flex;
     justify-content: center;
@@ -37,5 +38,51 @@
 
     &-loved__icon {
         margin-top: 6px;
+    }
+}
+
+//Buttons
+.btn {
+    height: 46px;
+    background: #F8F8FB;
+    padding: 0 20px;
+    user-select: none;
+
+    color: #1A162E;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 6px;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background: transparent;
+        font-weight: 400;
+        color: #9E9DA8;
+    }
+
+    &--primary {
+        background: #FFB700;
+    }
+
+    &--outline {
+        border: 1px solid #D2D1D6;
+        background: transparent;
+    }
+
+    &--rounded {
+        border-radius: 999px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }

@@ -273,7 +273,6 @@
                                                     name=""
                                                     id=""
                                                     value="$30.00"
-                                                    readonly
                                                 />
                                             </div>
 
@@ -291,43 +290,60 @@
                                                     name=""
                                                     id=""
                                                     value="$100.00"
-                                                    readonly
                                                 />
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="filter__sepertate"></div>
+
                                     <!-- Filter col 2 -->
                                     <div class="filter__form__col">
                                         <label
                                             for=""
                                             class="filter__form__label"
-                                            >Price</label
+                                            >Size/Weight</label
                                         >
-                                        <div class="filter__form__group">
-                                            <div
-                                                class="filter__form__weight-number"
-                                            >
-                                                <input
-                                                    type="text"
-                                                    name=""
-                                                    id=""
-                                                    value="500g"
-                                                />
+                                        <div class="filter__form__select-wrap">
+                                            <div class="filter__form__select" style="--filter-select-width: 129px;">
+                                               500g
+                                               <img src="./assets/icons/filter-arrow-down.svg" alt="" class="filter__form__select-arrow">
                                             </div>
-                                            <div
-                                                class="filter__form__weight-quantity"
-                                            >
-                                                <input
-                                                    type="text"
-                                                    name=""
-                                                    id=""
-                                                    value="Gram"
-                                                />
+                                            <div class="filter__form__select--seperate"></div>
+                                            <div class="filter__form__select">
+                                                Gram
+                                                <img src="./assets/icons/filter-arrow-down.svg" alt="" class="filter__form__select-arrow">
+                                             </div>
+                                        </div>
+
+                                            <div class="filter__form__tags">
+                                                <button class="filter__form__tag">Small</button>
+                                                <button class="filter__form__tag">Medium</button>
+                                                <button class="filter__form__tag">Large</button>
                                             </div>
+                                    </div>
+
+                                    <div class="filter__sepertate"></div>
+
+                                    <!-- Filter col 3 -->
+                                    <div class="filter__form__col">
+                                        <label for="" class="filter__form__label">Brand</label>
+                                        <div class="filter__form__input filter__form__input--large">
+                                            <input class="filter__form__input-searching" type="text" name="" id="" placeholder="Search brand name">
+                                            <img src="./assets/icons/filter-search.svg" alt="" class="filter__form__search-icon">
+                                        </div>
+
+                                        <div class="filter__form__tags">
+                                            <button class="filter__form__tag">Lavazza</button>
+                                            <button class="filter__form__tag">Nescafe</button>
+                                            <button class="filter__form__tag">Starbucks</button>
                                         </div>
                                     </div>
-                                    <!-- Filter col 3 -->
-                                    <div class="filter__form__col"></div>
+                                </div>
+
+                                <div class="filter__inner filter__inner--end">
+                                    <button class="btn btn--text filter__btn">Cancel</button>
+                                    <button class="btn btn--primary filter__btn--primary">Show Result</button>
                                 </div>
                             </form>
                         </div>

@@ -1,3 +1,5 @@
+@use "../layouts";
+
 .filter__wrap {
     position: relative;
     z-index: 1;
@@ -13,6 +15,13 @@
     background: var(--filter-bg-color);
     filter: drop-shadow(0px 40px 90px var(--filter-shadow));
 
+    &__sepertate {
+        width: 1px;
+        height: 162px;
+        background: #EEE;
+        margin: 0 30px;
+    }
+
     &__heading {
         color: var(--secondary-color-secondary-1, #1A162E);
         font-size: 2.2rem;
@@ -20,8 +29,15 @@
         line-height: 145%;
     }
 
-    &__form {
+    &__inner {
         display: flex;
+
+        &--end {
+            align-items: center;
+        }
+    }
+
+    &__form {
         margin-top: 30px;
 
         &__label {
@@ -33,10 +49,38 @@
             &--small {
                 display: block;
                 color: var(--filter-label-color);
-                font-size: 1.7rem;
+                font-size: 1.4rem;
                 font-weight: 500;
                 line-height: 142%;
                 margin-bottom: 10px;
+            }
+        }
+
+        &__select-wrap {
+            @extend %itemFlexCenter;
+            justify-content: space-between;
+            padding: 0 14px;
+            border-radius: 6px;
+            border: 1px solid #D2D1D6;
+            margin: 15px 0;
+        }
+
+        &__select {
+            min-width: var(--filter-select-width, 80px);
+            @extend %itemFlexCenter;
+            justify-content: space-between;
+            cursor: pointer;
+
+            color: var(--secondary-color-secondary-1, #1A162E);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142%;
+            
+            &--seperate {
+                width: 1px;
+                height: 35px;
+                background: #D2D1D6;
+                margin: 0 14px;
             }
         }
 
@@ -87,10 +131,63 @@
             border: 1px solid var(--filter-input-border-color);
 
             color: var(--filter-label-color);
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-weight: 500;
             line-height: 142%;
         }
+
+        &__tags {
+            @extend %itemFlexCenter;
+            gap: 20px;
+        }
+
+        &__tag {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: var(--filter-tag-bg-color);
+
+            color: var(--secondary-color-secondary-2, #9E9DA8);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142%;
+        }
+
+        &__input--large {
+            @extend %itemFlexCenter;
+            width: 334px;
+            height: 44px;
+            margin: 10px 0;
+
+            padding: 10px 16px;
+        }
+
+        &__search-icon {
+            margin-left: 12px;
+        }
+
+        &__input-searching {
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146%;
+
+            &::placeholder {
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 146%;
+                color: #9E9DA8;
+            }
+        }
     }
 
+    &__btn {
+        font-size: 1.5rem;
+        height: 22px;
+        padding: 0;
+        margin-left: auto;
+
+        &--primary {
+            height: 38px;
+        }
+    }
 }
