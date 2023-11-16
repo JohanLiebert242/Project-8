@@ -1,6 +1,6 @@
 @use "../layouts";
 @use "../theme";
-
+@use "../abstracts";
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -42,4 +42,12 @@ select{
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.container {
+    @include abstracts.screen(md) {
+        padding-left: 20px !important ; 
+        padding-right: 20px !important;
+    }
+
 }

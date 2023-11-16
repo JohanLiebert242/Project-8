@@ -26,4 +26,16 @@
 
     background: var(--love-btn-bg-color);
     box-shadow: 0px 20px 60px var(--love-btn-shadow);
+
+    &:not(&--loved) .love-btn-loved__icon {
+        display: none;
+    }
+
+    &--loved .product__item--heart-icon {
+        display: none;
+    }
+
+    &-loved__icon {
+        margin-top: 6px;
+    }
 }
