@@ -1,29 +1,71 @@
 @use "../layouts";
+@use "../abstracts";
 
 .filter__wrap {
     position: relative;
     z-index: 1;
 }
 
-.filter {
+.filter {    
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 57px;
+    right: 7px;
 
     padding: 30px;
     border-radius: 20px;
     background: var(--filter-bg-color);
     filter: drop-shadow(0px 40px 90px var(--filter-shadow));
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__icon {
+        filter: var(--filter-icon-color);
+    }
+
+    @include abstracts.screen(xl) {
+        height: calc(100vh - 93px);
+        overflow-y: auto;
+        padding-bottom: 0;
+        overscroll-behavior: contain;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 85vw;
+    }
+
+    &__content {
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+    }
+
+    &__arrow-down-icon {
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        filter: var(--filter-arrow-down-icon);
+    }
 
     &__sepertate {
         width: 1px;
         height: 162px;
         background: #EEE;
         margin: 0 30px;
+
+        @include abstracts.screen(xl) {
+            height: 1px;
+            width: 100%;
+            margin: 30px 0;
+        }
     }
 
     &__heading {
-        color: var(--secondary-color-secondary-1, #1A162E);
+        color: var(--filter-label-color);
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145%;
@@ -34,6 +76,20 @@
 
         &--end {
             align-items: center;
+            margin-top: 32px;
+            justify-content: flex-end;
+
+            @include abstracts.screen(xl) {
+                position: sticky;
+                bottom: 0;
+                background: #fff;
+                padding: 15px 0 15px;
+                margin-top: 18px;
+            }
+
+            @include abstracts.screen(sm) {
+                justify-content: space-between;
+            }
         }
     }
 
@@ -71,16 +127,24 @@
             justify-content: space-between;
             cursor: pointer;
 
-            color: var(--secondary-color-secondary-1, #1A162E);
+            color: var(--filter-label-color);
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142%;
+
+            @include abstracts.screen(xl) {
+                width: 100%;
+            }
             
             &--seperate {
                 width: 1px;
                 height: 35px;
                 background: #D2D1D6;
                 margin: 0 14px;
+            }
+
+            &-arrow {
+                filter: var(--filter-form-icon-color);
             }
         }
 
@@ -134,11 +198,21 @@
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142%;
+
+            background: var(--filter-input-bg-color);
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
         }
 
         &__tags {
             @extend %itemFlexCenter;
             gap: 20px;
+
+            @include abstracts.screen(sm) {
+                gap: 10px;
+            }
         }
 
         &__tag {
@@ -159,9 +233,14 @@
             margin: 10px 0;
 
             padding: 10px 16px;
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
         }
 
         &__search-icon {
+            filter: var(--filter-form-icon-color);
             margin-left: 12px;
         }
 
@@ -170,6 +249,7 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146%;
+            background: transparent;
 
             &::placeholder {
                 font-size: 1.5rem;
@@ -181,13 +261,13 @@
     }
 
     &__btn {
-        font-size: 1.5rem;
-        height: 22px;
+        font-size: 1.4rem;
+        height: 38px;
         padding: 0;
-        margin-left: auto;
 
         &--primary {
-            height: 38px;
+            font-size: 1.5rem;
+            padding: 0 10px;
         }
     }
 }

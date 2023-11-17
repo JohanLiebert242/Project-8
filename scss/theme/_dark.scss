@@ -35,8 +35,9 @@ html.dark {
     --home__item-bg-responsive: #171C28;
 
      //Buttons
-     --filter-text-color: #6C6C72;
-     --filter-btn-bg-color: #fff;
+     --filter-btn-color: #D2D1D6;
+     --filter-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(123%) hue-rotate(212deg) brightness(90%) contrast(87%);
+     --filter-btn-bg-color: #171C28;
      --love-btn-shadow: rgba(124, 124, 124, 0.20); 
      --love-btn-bg-color: #292E39;
 
@@ -50,5 +51,9 @@ html.dark {
        --filter-bg-color: #292E39;
        --filter-shadow: rgba(0, 0, 0, 0.40);
        --filter-label-color: #fff;
-       --filter-tag-bg-color: #171C28
+       --filter-tag-bg-color: #171C28;
+       --filter-text-color: #fff;
+       --filter-input-bg-color: #292E39;
+       --filter-form-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%) contrast(101%);
+       --filter-arrow-down-icon: brightness(0) saturate(100%) invert(13%) sepia(3%) saturate(4321%) hue-rotate(184deg) brightness(97%) contrast(85%);
 }

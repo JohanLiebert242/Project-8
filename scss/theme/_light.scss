@@ -35,8 +35,9 @@ html {
 
 
     //Buttons
-    --filter-text-color: #6C6C72;
+    --filter-btn-color: #1A162E;
     --filter-btn-bg-color: #fff;
+    --filter-icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%) saturate(6039%) hue-rotate(213deg) brightness(89%) contrast(95%);
     --love-btn-bg-color: #fff;
     --love-btn-shadow: rgba(124, 124, 124, 0.20); 
 
@@ -51,6 +52,8 @@ html {
     --filter-shadow: rgba(200, 200, 200, 0.40);
     --filter-label-color: #1A162E;
     --filter-input-border-color: #D2D1D6;
+    --filter-input-bg-color: #FFF;
     --filter-tag-bg-color: #F8F8FB;
-
+    --filter-form-icon-color: brightness(0) saturate(100%) invert(8%) sepia(13%) saturate(3760%) hue-rotate(215deg) brightness(91%) contrast(95%);
+    --filter-arrow-down-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%) contrast(101%);
 }
