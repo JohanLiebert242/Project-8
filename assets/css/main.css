@@ -54,6 +54,8 @@ table {
 
 html.dark {
   --header-bg-color: #171c28;
+  --body-bg-color: #292E39;
+  --footer-bg-color: #171c28;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
       saturate(2095%) hue-rotate(156deg) brightness(115%) contrast(110%);
   --top-act__group-bg-color: #292e39;
@@ -62,7 +64,6 @@ html.dark {
   --dropdown__inner-bg: #292E39;
   --dropdown__shadow: rgba(23, 28, 40, 0.40);
   --dropdown-arrow: brightness(0) saturate(100%) invert(40%) sepia(14%) saturate(466%) hue-rotate(182deg) brightness(93%) contrast(93%);
-  --body-bg-color: #292E39;
   --top-menu__border-color: #171C28;
   --top-menu__text-color: #B9BABE;
   --navbar-background-color-responsive: #292e39;
@@ -92,11 +93,14 @@ html.dark {
   --filter-input-bg-color: #292E39;
   --filter-form-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%) contrast(101%);
   --filter-arrow-down-icon: brightness(0) saturate(100%) invert(13%) sepia(3%) saturate(4321%) hue-rotate(184deg) brightness(97%) contrast(85%);
+  --footer-text-color: #fff;
+  --footer-input-border-color: #D2D1D6;
 }
 
 html {
   --header-bg-color: #eee;
   --body-bg-color: #f5f5f6;
+  --footer-bg-color: #eee;
   --icon-color: brightness(0) saturate(100%) invert(10%) sepia(13%)
       saturate(2112%) hue-rotate(210deg) brightness(97%) contrast(100%);
   --top-act__group-bg-color: #fff;
@@ -133,6 +137,8 @@ html {
   --filter-tag-bg-color: #F8F8FB;
   --filter-form-icon-color: brightness(0) saturate(100%) invert(8%) sepia(13%) saturate(3760%) hue-rotate(215deg) brightness(91%) contrast(95%);
   --filter-arrow-down-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%) contrast(101%);
+  --footer-text-color: #1A162E;
+  --footer-input-border-color: #D2D1D6;
 }
 
 .filter__form__select-wrap, .filter__form__select, .filter__form__tags, .filter__form__input--large, .top-menu, .logo, .top-act__btn, .top-act__group--search, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -369,6 +375,75 @@ html {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+}
+
+.footer {
+  background: var(--footer-bg-color);
+  margin-top: 40px;
+  padding: 30px 50px;
+}
+.footer__btn {
+  height: 37px !important;
+  margin-top: 10px;
+}
+
+.col__content {
+  display: flex;
+  flex-direction: column;
+}
+.col__content__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 146%;
+  margin-bottom: 30px;
+}
+.col__content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.col__content__link {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146%;
+}
+.col__content--desc {
+  margin: 30px 0;
+}
+.col__content--desc, .col__content--reminder {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146%;
+  color: var(--footer-text-color);
+}
+.col__action {
+  display: flex;
+  gap: 10px;
+}
+.col__input {
+  padding: 8px 12px;
+  border: 1px solid var(--footer-input-border-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142%;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.col__input::placeholder {
+  font-weight: 400;
+}
+.col__link--icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0;
+}
+.col__link--icon:not(:first-child) {
+  margin-left: 10px;
+}
+.col__desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142%;
 }
 
 *, ::after, ::before {
@@ -2015,6 +2090,7 @@ a {
 }
 @media (max-width: 1199.98px) {
   .filter__sepertate {
+    display: block;
     height: 1px;
     width: 100%;
     margin: 30px 0;
@@ -2224,6 +2300,7 @@ a {
 }
 .home__cate {
   --grid-gutter-x: 51px;
+  --grid-gutter-y: 30px;
 }
 @media (max-width: 991.98px) {
   .home__cate {

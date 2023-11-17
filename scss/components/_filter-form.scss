@@ -72,6 +72,7 @@
         margin: 0 30px;
 
         @include abstracts.screen(xl) {
+            display: block;
             height: 1px;
             width: 100%;
             margin: 30px 0;
