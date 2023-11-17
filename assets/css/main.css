@@ -1958,7 +1958,7 @@ a {
   position: absolute;
   top: 57px;
   right: 7px;
-  padding: 30px;
+  padding: 30px 0;
   border-radius: 20px;
   background: var(--filter-bg-color);
   filter: drop-shadow(0px 40px 90px var(--filter-shadow));
@@ -1971,22 +1971,33 @@ a {
 .filter__icon {
   filter: var(--filter-icon-color);
 }
-@media (max-width: 1199.98px) {
-  .filter {
-    height: calc(100vh - 93px);
-    overflow-y: auto;
-    padding-bottom: 0;
-    overscroll-behavior: contain;
-  }
-}
 @media (max-width: 575.98px) {
   .filter {
-    width: 85vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
   }
+}
+.filter__content, .filter__heading, .filter__inner--end {
+  padding: 0 30px;
+}
+.filter__content {
+  padding: 0 30px;
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 @media (max-width: 1199.98px) {
   .filter__content {
     flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__content {
+    max-height: calc(100vh - 250px);
+    padding-bottom: 60px;
   }
 }
 .filter__arrow-down-icon {
@@ -2023,18 +2034,12 @@ a {
   margin-top: 32px;
   justify-content: flex-end;
 }
-@media (max-width: 1199.98px) {
-  .filter__inner--end {
-    position: sticky;
-    bottom: 0;
-    background: #fff;
-    padding: 15px 0 15px;
-    margin-top: 18px;
-  }
-}
 @media (max-width: 575.98px) {
   .filter__inner--end {
     justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    background: var(--filter-bg-color);
   }
 }
 .filter__form {
@@ -2072,7 +2077,7 @@ a {
 }
 @media (max-width: 1199.98px) {
   .filter__form__select {
-    width: 100%;
+    flex-grow: 1;
   }
 }
 .filter__form__select--seperate {
@@ -2088,7 +2093,8 @@ a {
   margin-top: 20px;
 }
 .filter__form__group--inline {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .filter__form__slider {
@@ -2125,7 +2131,7 @@ a {
   line-height: 142%;
   background: var(--filter-input-bg-color);
 }
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
   .filter__form__input {
     width: 100%;
   }
@@ -2169,6 +2175,11 @@ a {
   line-height: 146%;
   background: transparent;
 }
+@media (max-width: 575.98px) {
+  .filter__form__input-searching {
+    font-size: 1.6rem;
+  }
+}
 .filter__form__input-searching::placeholder {
   font-size: 1.5rem;
   font-weight: 400;
@@ -2183,6 +2194,12 @@ a {
 .filter__btn--primary {
   font-size: 1.5rem;
   padding: 0 10px;
+}
+@media (max-width: 575.98px) {
+  .filter__btn, .filter__btn--primary {
+    height: 42px;
+    flex: 1;
+  }
 }
 
 .home__container {
