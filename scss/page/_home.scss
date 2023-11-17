@@ -49,6 +49,10 @@
     column-gap: 20px;
     height: 100%;
 
+    @include abstracts.screen(xxl) {
+        padding-right: 15px;
+    }
+
     @include abstracts.screen(xl) {
         flex-direction: column;
         align-items: center;
@@ -89,7 +93,7 @@
         border-radius: 10px;
 
         @include abstracts.screen(xxl) {
-            width: 100%;
+            min-width: 50%;
             height: 140px;
         }
 
