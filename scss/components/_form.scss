@@ -1,0 +1,63 @@
+.form {
+    &__group {
+        
+        &-img {
+            
+            margin-left: 10px;
+        }
+
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        &-wrapper {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            border: 1.5px solid #D2D1D6;
+            overflow: hidden;
+            padding: 0 12px;
+        }
+
+        &-input {
+            flex: 1;
+            height: 100%;
+            color: #1A162E;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            &::placeholder {
+                color: #D2D1D6;
+            }
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        &-input {
+            width: 18.5px;
+            height: 18.5px;
+            border-radius: 1.5px;
+        }
+
+        &-label {
+            color: #9E9DA8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+}
