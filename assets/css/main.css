@@ -383,6 +383,7 @@ html {
   background: var(--footer-bg-color);
   margin-top: 40px;
   padding: 30px 50px;
+  font-size: 1.4rem;
 }
 @media (max-width: 767.98px) {
   .footer {
@@ -413,7 +414,6 @@ html {
   }
 }
 .footer__copyright--desc {
-  font-size: 1.4rem;
   font-weight: 400;
   color: #b2b0b0;
 }
@@ -429,6 +429,12 @@ html {
 .footer__social-links--icon {
   width: 30px;
   height: 30px;
+}
+@media (max-width: 575.98px) {
+  .footer__social-links--icon {
+    width: 42px;
+    height: 42px;
+  }
 }
 .footer__fb {
   filter: brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2856%) hue-rotate(207deg) brightness(106%) contrast(91%);
@@ -478,14 +484,14 @@ html {
   gap: 15px;
 }
 .col__content__link {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 146%;
   color: var(--footer-text-color);
 }
 @media (max-width: 991.98px) {
   .col__content__link {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 300px;
   }
 }
@@ -493,7 +499,6 @@ html {
   margin: 30px 0;
 }
 .col__content--desc, .col__content--reminder {
-  font-size: 1.5rem;
   font-weight: 400;
   line-height: 146%;
   color: var(--footer-text-color);
@@ -518,10 +523,12 @@ html {
 }
 @media (max-width: 767.98px) {
   .col__input {
+    font-size: 1.6rem;
     width: 60%;
   }
 }
 .col__input::placeholder {
+  font-size: 1.4rem;
   font-weight: 400;
 }
 .col__link--icon {
@@ -2050,6 +2057,8 @@ a {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   height: 46px;
   background: #F8F8FB;
   padding: 0 20px;
@@ -2100,6 +2109,12 @@ a {
   position: relative;
   padding-top: 100%;
 }
+.product__item--content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
 .product__item--thumb {
   position: absolute;
   top: 0;
@@ -2123,6 +2138,9 @@ a {
   font-weight: 400;
   line-height: 147%;
   margin: 16px 0;
+}
+.product__item--brand--error {
+  margin-top: 31px;
 }
 .product__item--info {
   display: flex;
@@ -2326,6 +2344,11 @@ a {
     width: 100%;
   }
 }
+@media (max-width: 767.98px) {
+  .filter__form__input {
+    font-size: 1.6rem;
+  }
+}
 .filter__form__tags {
   gap: 20px;
 }
@@ -2351,6 +2374,7 @@ a {
 }
 @media (max-width: 575.98px) {
   .filter__form__input--large {
+    font-size: 1.6rem;
     width: 100%;
   }
 }

@@ -5,6 +5,8 @@
     background: var(--footer-bg-color);
     margin-top: 40px;
     padding: 30px 50px;
+    font-size: 1.4rem;
+
 
     @include abstracts.screen(md) {
         padding: 0;
@@ -33,7 +35,6 @@
         }
 
         &--desc {
-            font-size: 1.4rem;
             font-weight: 400;
             color: #b2b0b0;
 
@@ -51,6 +52,11 @@
         &--icon {
             width: 30px;
             height: 30px;
+
+            @include abstracts.screen(sm) {
+                width: 42px;
+                height: 42px;
+            }
         }
     }
 
@@ -108,13 +114,13 @@
         }
 
         &__link {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
             line-height: 146%;
             color: var(--footer-text-color);
 
             @include abstracts.screen(lg) {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
                 font-weight: 300px;
             }
         }
@@ -126,7 +132,6 @@
 
     &__content--desc,
     &__content--reminder {
-        font-size: 1.5rem;
         font-weight: 400;
         line-height: 146%;
         color: var(--footer-text-color);
@@ -151,10 +156,12 @@
         }
         
         @include abstracts.screen(md) {
+            font-size: 1.6rem;
             width: 60%;
         }
 
         &::placeholder {
+            font-size: 1.4rem;
             font-weight: 400;
         }
     }

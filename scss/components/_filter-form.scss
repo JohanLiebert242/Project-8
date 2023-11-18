@@ -215,6 +215,10 @@
             @include abstracts.screen(xl) {
                 width: 100%;
             }
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
         }
 
         &__tags {
@@ -246,6 +250,7 @@
             padding: 10px 16px;
 
             @include abstracts.screen(sm) {
+                font-size: 1.6rem;
                 width: 100%;
             }
         }
