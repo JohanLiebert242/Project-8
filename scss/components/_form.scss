@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .form {
     &__group.invalid &__text-wrapper{
         border-color: #ff000069;
@@ -17,6 +19,11 @@
         &--inline {
             display: flex;
             align-items: center;
+            margin-top: -24px;
+       
+            @include abstracts.screen(sm)  {
+                margin-top: -14px;
+            }
         }
     }
 
@@ -34,7 +41,7 @@
         &-input {
             flex: 1;
             height: 100%;
-            color: #1A162E;
+            color: var( --author-text-color);
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;

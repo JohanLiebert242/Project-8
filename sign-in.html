@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign-in page</title>
+        <title>Sign up page</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon" />
@@ -86,6 +86,154 @@
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <h1 class="sign-in"></h1>
+        <main class="author">
+            <!-- Author Intro -->
+            <div class="author__intro">
+                <!-- Logo -->
+                <a
+                    href="./index.html"
+                    class="logo author__logo author__intro-logo d-none d-md-flex"
+                >
+                    <img
+                        src="./assets/icons/logo.svg"
+                        alt="grocerymart"
+                        class="logo--img"
+                    />
+                    <h1 class="logo--brand">grocerymart</h1>
+                </a>
+                <img
+                    src="./assets/icons/author/author-intro.svg"
+                    alt=""
+                    class="author__intro--img"
+                />
+                <p class="author__intro-desc">
+                    The best of luxury brand values, high quality products, and
+                    innovative services
+                </p>
+                <button
+                    class="author__intro-more d-none d-md-flex js-toggle"
+                    toggle-target="#author__content"
+                >
+                    <img src="./assets/icons/author/author-more.svg" alt="" />
+                </button>
+            </div>
+
+            <!-- Author content -->
+            <div id="author__content" class="author__content hide">
+                <div class="author__content-inner">
+                    <!-- Logo -->
+                    <a href="./index.html" class="logo author__logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="grocerymart"
+                            class="logo--img"
+                        />
+                        <h1 class="logo--brand">grocerymart</h1>
+                    </a>
+
+                    <h1 class="author__content-heading">Hello Again!</h1>
+                    <p class="author__content-desc">
+                        Welcome back to sign in. As a returning customer, you
+                        have access to your previously saved all information.
+                    </p>
+
+                    <!-- Form -->
+                    <form
+                        id="sign-up"
+                        action="./index-logined.html"
+                        class="form author__form"
+                    >
+                        <div class="form__group">
+                            <div class="form__text-wrapper">
+                                <input
+                                    class="form__text-input author__form-input"
+                                    id="email"
+                                    rules="required|email"
+                                    type="email"
+                                    name="email"
+                                    placeholder="VD: ntuanloc24@gmail.com"
+                                />
+                                <img
+                                    src="./assets/icons/author/message.svg"
+                                    alt=""
+                                    class="form__group-img"
+                                />
+                            </div>
+                            <span for="" class="form__message"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__text-wrapper">
+                                <input
+                                    class="form__text-input author__form-input"
+                                    id="password"
+                                    rules="required|min:6"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                />
+                                <img
+                                    src="./assets/icons/author/lock.svg"
+                                    alt=""
+                                    class="form__group-img"
+                                />
+                            </div>
+                            <span for="" class="form__message"></span>
+                        </div>
+
+                        <div class="form__group form__group--inline">
+                            <label
+                                for="form__checkbox-input"
+                                class="form__checkbox"
+                            >
+                                <input
+                                    id="form__checkbox-input"
+                                    type="checkbox"
+                                    name=""
+                                    class="form__checkbox-input d-none"
+                                />
+                                <span
+                                    class="form__checkbox-label author__checkbox-label"
+                                    >Set as default card</span
+                                >
+                            </label>
+                            <a href="" class="author__link form__pull-right"
+                                >Recovery Password</a
+                            >
+                        </div>
+
+                        <div class="form__group author__btn-group">
+                            <button class="btn btn--primary author__btn">
+                                Login
+                            </button>
+                            <button
+                                class="btn btn-outline author__btn btn--no-margin author__btn-google"
+                            >
+                                <img
+                                    src="./assets/icons/author/google.svg"
+                                    alt=""
+                                    class="author__btn-google-img"
+                                />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Ques -->
+                    <div class="author__content-footer">
+                        <span class="author__content-ques"
+                            >Don’t have an account yet?</span
+                        >
+                        <a href="./sign-up.html" class="author__link"
+                            >Sign up</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
+    <script src="./assets/js/author.js"></script>
 </html>

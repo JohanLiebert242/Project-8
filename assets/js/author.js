@@ -88,7 +88,14 @@ function Validator(formSelector) {
     handleFormSubmit = function(e) {
         e.preventDefault();
         for(var input of inputs) {
-           handleValidate({target: input});
+           var isFormValid = true;
+           if(!(handleValidate({target: input}))) {
+                isFormValid = false;
+           }
+
+           if(isFormValid) {
+                formElement.submit();
+           }
             
         }
     }
