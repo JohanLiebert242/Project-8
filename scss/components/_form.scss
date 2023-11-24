@@ -48,8 +48,21 @@
     &__checkbox {
         display: flex;
         align-items: center;
-        gap: 10px;
+        position: relative;
 
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+       
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid #9E9DA8;
+        }
 
         &-input {
             width: 18.5px;
@@ -62,6 +75,24 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+            margin-left: 29px;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            background: var(--author-checkbox-checked-bg);
+            border: 1.5px solid #B9BABE;
+        }
+
+        &::after {
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid var(--author-checkbox-checked);
+            border-bottom: 2px solid var(--author-checkbox-checked);
+            rotate: -45deg;
+            top: 7px;
+            left: 5px;
         }
     }
 

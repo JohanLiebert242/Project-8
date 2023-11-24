@@ -1,4 +1,6 @@
 @use "../abstracts";
+@use "../theme";
+
 
 .author {
     min-height: 100vh;
@@ -61,6 +63,8 @@
         }
 
         &-input {
+            background: var(--author-input-bg-color);
+
             @include abstracts.screen(sm) {
                 font-size: 1.6rem;
             }
@@ -125,7 +129,7 @@
                 margin-top: 70px;
                 padding-bottom: 40px;
             }
-        }
+        }   
 
         &-ques {
             color: #9E9DA8;
@@ -161,6 +165,16 @@
 
     &__btn {
         width: 100%;
+
+        &-google {
+            border: 1px solid var(--author-btn-google-border-color);
+            color: var(--author-btn-google-color);
+            background: transparent;
+        }
+
+        &-google-img {
+            filter: var(--author-btn-google-img-color);
+        }
     }
 
     &__checkbox-label {
