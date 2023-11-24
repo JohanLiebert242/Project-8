@@ -30,7 +30,7 @@
         }
 
         &--img {
-            max-width: 100%;
+           width: min(424px, 100%);
         }
 
         &-logo,
@@ -188,4 +188,3 @@
 }
 
 
-// background: rgba(16, 255, 16, 0.3);

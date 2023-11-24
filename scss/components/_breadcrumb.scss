@@ -1,0 +1,30 @@
+@use "../layouts";
+
+.breadcrumb {
+    @extend %itemFlexCenter;
+    border-radius: 10px;
+    background: var(--breadcrumb-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--breadcrumb-shadow);
+
+    &__item {
+        @extend %itemFlexCenter;
+        gap: 8px;
+    }
+
+    &__link {
+        padding: 20px 0 20px 20px;
+        color: #9E9DA8;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height:  150%;
+
+        &--current {
+            color: var(--breadcrumb-link-current-color);
+        }
+    }
+
+    &__icon {
+        margin-top: 3px;
+    }
+
+}

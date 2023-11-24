@@ -106,6 +106,12 @@ html.dark {
   --author-checkbox-checked: #fff;
   --author-checkbox-checked-bg: #292E39;
   --reset-password-success: #10ff10a3;
+  --product-page-bg-color: #292E39;
+  --product-page-text-color: #fff;
+  --product-page-tag: #292E39;
+  --breadcrumb-bg-color: #171C28;
+  --breadcrumb-shadow: rgba(23, 28, 40, 0.20);
+  --breadcrumb-link-current-color: #fff;
 }
 
 html {
@@ -161,9 +167,15 @@ html {
   --author-checkbox-checked: #fff;
   --author-checkbox-checked-bg: blue;
   --reset-password-success: #10ff104d;
+  --product-page-bg-color: #fff;
+  --product-page-text-color: #1A162E;
+  --product-page-tag: #EDEDF6;
+  --breadcrumb-bg-color: #F6F6F6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.20);
+  --breadcrumb-link-current-color: #1A162E;
 }
 
-.filter__form__select-wrap, .filter__form__select, .filter__form__tags, .filter__form__input--large, .top-menu, .logo, .top-act__btn, .top-act__group--search, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
+.product-page__content-review, .breadcrumb, .breadcrumb__item, .filter__form__select-wrap, .filter__form__select, .filter__form__tags, .filter__form__input--large, .top-menu, .logo, .top-act__btn, .top-act__group--search, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
 }
@@ -2548,6 +2560,28 @@ a {
   line-height: 1.6rem;
 }
 
+.breadcrumb {
+  border-radius: 10px;
+  background: var(--breadcrumb-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumb-shadow);
+}
+.breadcrumb__item {
+  gap: 8px;
+}
+.breadcrumb__link {
+  padding: 20px 0 20px 20px;
+  color: #9E9DA8;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.breadcrumb__link--current {
+  color: var(--breadcrumb-link-current-color);
+}
+.breadcrumb__icon {
+  margin-top: 3px;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2728,7 +2762,7 @@ a {
   margin-top: 50px;
 }
 .author__intro--img {
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .author__intro-logo, .author__intro-more {
   position: absolute;
@@ -2869,14 +2903,6 @@ a {
   }
 }
 
-.reset-password__img {
-  max-width: 425px;
-}
-@media (max-width: 991.98px) {
-  .reset-password__img {
-    max-width: 300px;
-  }
-}
 .reset-password__btn-group {
   margin-top: 0;
 }
@@ -2896,6 +2922,95 @@ a {
   font-weight: 500;
   margin-top: 20px;
   background: var(--reset-password-success);
+}
+
+.product-page {
+  background: var(--product-page-bg-color);
+  padding: 30px 0;
+}
+.product-page__body {
+  display: flex;
+  margin-top: 30px;
+}
+.product-page__media-thumb {
+  width: min(551px, 100%);
+}
+.product-page__info {
+  background: var(--breadcrumb-bg-color);
+  padding: 60px;
+}
+.product-page__info-heading {
+  color: var(--product-page-text-color);
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 138.462%;
+}
+.product-page__content {
+  display: flex;
+  gap: 60px;
+  margin-top: 30px;
+}
+.product-page__content-col--activity {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.product-page__content-review {
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.product-page__content-review-title {
+  color: var(--secondary-color-secondary-1, #1A162E);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.product-page__content-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.product-page__content-row--act {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #B9BABE;
+  border-radius: 6px;
+}
+.product-page__content-title {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.product-page__content-title--act {
+  font-size: 2.6rem;
+}
+.product-page__content-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.product-page__content-title-wrapper--act {
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.product-page__content-note {
+  color: var(--secondary-color-secondary-1, #1A162E);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.product-page__content-act {
+  display: flex;
+  gap: 20px;
+}
+.product-page-filter {
+  margin: 20px 0;
+}
+.product-page__tag {
+  background: var(--product-page-tag);
 }
 
 /*# sourceMappingURL=main.css.map */
