@@ -54,6 +54,17 @@
         flex-direction: column;
         gap: 30px;
         width: 100%;
+
+        @include abstracts.screen(sm) {
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        &-input {
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+            }
+        }
     }
 
     &__content {
@@ -87,6 +98,11 @@
             font-weight: 500;
             line-height:  146.667%;
             margin: 50px 0 10px 0;
+
+            @include abstracts.screen(sm) {
+                font-size: 2.2rem;
+                line-height: 145.455%;
+            }
         }
 
         &-desc {
@@ -95,6 +111,11 @@
             font-weight: 500;
             line-height: 146.667%;
             padding: 0 30px;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
         }
 
         &-footer {
@@ -112,6 +133,11 @@
             font-weight: 400;
             line-height: 144.444%;
             margin-right: 10px;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+                line-height: 150% 
+            }
         }
     }
 
@@ -120,6 +146,11 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height:  146.667%;
+
+        @include abstracts.screen(sm)  {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
     }
 
     &__btn-group {
@@ -130,5 +161,14 @@
 
     &__btn {
         width: 100%;
+    }
+
+    &__checkbox-label {
+
+        @include abstracts.screen(sm)  {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+      
     }
 }
