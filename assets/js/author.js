@@ -47,6 +47,8 @@ function Validator(formSelector) {
     handleValidate = function(e) {
         var rules = formRules[e.target.name];
         var errorMessage;
+        var resetSuccess = formElement.querySelector('.reset-password--success');
+
 
         for(var rule of rules) {
             errorMessage = rule(e.target.value);
@@ -66,7 +68,6 @@ function Validator(formSelector) {
                 }
             }
         }
-
         return !errorMessage;
     }
 
@@ -92,12 +93,12 @@ function Validator(formSelector) {
            if(!(handleValidate({target: input}))) {
                 isFormValid = false;
            }
-
-           if(isFormValid) {
-                formElement.submit();
-           }
             
         }
+    
+        if(isFormValid) {
+            formElement.submit();
+       }
     }
 
     var formElement = document.querySelector(formSelector);

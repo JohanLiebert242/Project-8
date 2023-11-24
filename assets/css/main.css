@@ -105,6 +105,7 @@ html.dark {
   --author-btn-google-img-color: brightness(0) saturate(100%) invert(68%) sepia(41%) saturate(0%) hue-rotate(82deg) brightness(99%) contrast(97%);
   --author-checkbox-checked: #fff;
   --author-checkbox-checked-bg: #292E39;
+  --reset-password-success: #10ff10a3;
 }
 
 html {
@@ -159,6 +160,7 @@ html {
   --author-btn-google-img-color: brightness(0) saturate(100%) invert(9%) sepia(28%) saturate(1211%) hue-rotate(210deg) brightness(92%) contrast(97%);
   --author-checkbox-checked: #fff;
   --author-checkbox-checked-bg: blue;
+  --reset-password-success: #10ff104d;
 }
 
 .filter__form__select-wrap, .filter__form__select, .filter__form__tags, .filter__form__input--large, .top-menu, .logo, .top-act__btn, .top-act__group--search, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2497,6 +2499,7 @@ a {
   display: flex;
   align-items: center;
   position: relative;
+  margin-top: 20px;
 }
 .form__checkbox::before, .form__checkbox::after {
   content: "";
@@ -2781,7 +2784,7 @@ a {
   text-align: center;
   width: min(460px, 100%);
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 .author__content-heading {
   color: var(--author-text-color);
@@ -2864,6 +2867,35 @@ a {
     font-size: 1.4rem;
     line-height: 142.857%;
   }
+}
+
+.reset-password__img {
+  max-width: 425px;
+}
+@media (max-width: 991.98px) {
+  .reset-password__img {
+    max-width: 300px;
+  }
+}
+.reset-password__btn-group {
+  margin-top: 0;
+}
+.reset-password__inner {
+  padding: 250px 0;
+}
+.reset-password__footer {
+  margin-top: 20px;
+}
+.reset-password--success {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 20px;
+  background: var(--reset-password-success);
 }
 
 /*# sourceMappingURL=main.css.map */
