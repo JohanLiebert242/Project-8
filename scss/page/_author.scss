@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .author {
     min-height: 100vh;
     display: flex;
@@ -6,6 +8,7 @@
     &__intro,
     &__content {
         flex: 1;
+        padding: 0 30px;
     }
 
     &__intro {
@@ -13,6 +16,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         &-desc {
             color: var(--author-text-color);
@@ -22,6 +26,26 @@
             line-height: 144.444%;
             margin-top: 50px;
         }
+
+        &--img {
+            max-width: 100%;
+        }
+
+        &-logo,
+        &-more {
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &-logo {
+            top: 80px;
+        }
+
+        &-more {
+            bottom: 80px;
+        }
+        
     }
 
     &__form {
@@ -34,6 +58,18 @@
 
     &__content {
         background: var(--author-content-bg-color);
+        overflow-y: auto;
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            transition: translate .3s ease;
+
+            &.hide {
+                translate: 100%;
+            }
+        }
 
         &-inner {
             display: flex;
@@ -62,7 +98,12 @@
         }
 
         &-footer {
-            margin-top: 108px;
+            margin-top: 138px;
+
+            @include abstracts.screen(md) {
+                margin-top: 70px;
+                padding-bottom: 40px;
+            }
         }
 
         &-ques {

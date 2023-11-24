@@ -1,4 +1,12 @@
 .form {
+    &__group.invalid &__text-wrapper{
+        border-color: #ff000069;
+    }
+
+    &__group.invalid &__message {
+        color: #ff0000b8;
+    }
+
     &__group {
         
         &-img {
@@ -59,5 +67,14 @@
 
     &__pull-right {
         margin-left: auto;
+    }
+
+    &__message {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        padding: 4px 0 0;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
     }
 }
