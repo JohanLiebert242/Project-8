@@ -1,10 +1,20 @@
 @use "../layouts";
+@use "../abstracts";
 
 .breadcrumb {
     @extend %itemFlexCenter;
+    flex-wrap: wrap;
     border-radius: 10px;
     background: var(--breadcrumb-bg-color);
     box-shadow: 0px 20px 60px 10px var(--breadcrumb-shadow);
+    gap: 20px;
+    padding: 20px;
+
+    @include abstracts.screen(md) {
+        gap: 16px;
+    }
+    
+    
 
     &__item {
         @extend %itemFlexCenter;
@@ -12,11 +22,11 @@
     }
 
     &__link {
-        padding: 20px 0 20px 20px;
         color: #9E9DA8;
         font-size: 1.6rem;
         font-weight: 500;
         line-height:  150%;
+        white-space: nowrap;
 
         &--current {
             color: var(--breadcrumb-link-current-color);
