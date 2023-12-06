@@ -104,59 +104,7 @@
     }
 
     &__form {
-        margin-top: 30px;
-
-        &__label {
-            color: var(--filter-label-color);
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 145%;
-
-            &--small {
-                display: block;
-                color: var(--filter-label-color);
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 142%;
-                margin-bottom: 10px;
-            }
-        }
-
-        &__select-wrap {
-            @extend %itemFlexCenter;
-            justify-content: space-between;
-            padding: 0 14px;
-            border-radius: 6px;
-            border: 1px solid #D2D1D6;
-            margin: 15px 0;
-        }
-
-        &__select {
-            min-width: var(--filter-select-width, 80px);
-            @extend %itemFlexCenter;
-            justify-content: space-between;
-            cursor: pointer;
-
-            color: var(--filter-label-color);
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142%;
-
-            @include abstracts.screen(xl) {
-                flex-grow: 1;
-            }
-            
-            &--seperate {
-                width: 1px;
-                height: 35px;
-                background: #D2D1D6;
-                margin: 0 14px;
-            }
-
-            &-arrow {
-                filter: var(--filter-form-icon-color);
-            }
-        }
+        margin-top: 30px; 
 
         &__group {
             margin-top: 20px;
@@ -203,7 +151,7 @@
             width: 121px;
             padding: 8px 12px;
             border-radius: 6px;
-            border: 1px solid var(--filter-input-border-color);
+            border: 1.5px solid var(--filter-input-border-color);
 
             color: var(--filter-label-color);
             font-size: 1.4rem;
@@ -219,26 +167,6 @@
             @include abstracts.screen(md) {
                 font-size: 1.6rem;
             }
-        }
-
-        &__tags {
-            @extend %itemFlexCenter;
-            gap: 20px;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &__tag {
-            padding: 6px 12px;
-            border-radius: 6px;
-            background: var(--filter-tag-bg-color);
-
-            color: var(--secondary-color-secondary-2, #9E9DA8);
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142%;
         }
 
         &__input--large {

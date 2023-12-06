@@ -1,7 +1,8 @@
 @use "../abstracts";
+@use "../base";
 
 .form {
-    &__group.invalid &__text-wrapper{
+    &__group.invalid &__text-wrapper {
         border-color: #ff000069;
     }
 
@@ -10,9 +11,7 @@
     }
 
     &__group {
-        
         &-img {
-            
             margin-left: 10px;
         }
 
@@ -20,8 +19,8 @@
             display: flex;
             align-items: center;
             margin-top: -24px;
-       
-            @include abstracts.screen(sm)  {
+
+            @include abstracts.screen(sm) {
                 margin-top: -14px;
             }
         }
@@ -33,7 +32,7 @@
             display: flex;
             align-items: center;
             border-radius: 10px;
-            border: 1.5px solid #D2D1D6;
+            border: 1.5px solid #d2d1d6;
             overflow: hidden;
             padding: 0 12px;
         }
@@ -41,13 +40,13 @@
         &-input {
             flex: 1;
             height: 100%;
-            color: var( --author-text-color);
+            color: var(--author-text-color);
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
 
             &::placeholder {
-                color: #D2D1D6;
+                color: #d2d1d6;
             }
         }
     }
@@ -62,14 +61,13 @@
         &::after {
             content: "";
             position: absolute;
-       
         }
 
         &::before {
             width: 19px;
             height: 19px;
             border-radius: 5px;
-            border: 1.5px solid #9E9DA8;
+            border: 1.5px solid #9e9da8;
         }
 
         &-input {
@@ -79,7 +77,7 @@
         }
 
         &-label {
-            color: #9E9DA8;
+            color: #9e9da8;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
@@ -90,7 +88,7 @@
     &__checkbox:has(:checked) {
         &::before {
             background: var(--author-checkbox-checked-bg);
-            border: 1.5px solid #B9BABE;
+            border: 1.5px solid #b9babe;
         }
 
         &::after {
@@ -115,5 +113,77 @@
         padding: 4px 0 0;
         font-size: 1.4rem;
         line-height: 1.6rem;
+    }
+
+    &__label {
+        color: var(--filter-label-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145%;
+
+        &--small {
+            display: block;
+            color: var(--filter-label-color);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__select-wrap {
+        @extend %itemFlexCenter;
+        justify-content: space-between;
+        padding: 0 14px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        margin: 15px 0;
+    }
+
+    &__select {
+        min-width: var(--filter-select-width, 80px);
+        @extend %itemFlexCenter;
+        justify-content: space-between;
+        cursor: pointer;
+
+        color: var(--filter-label-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 142%;
+
+        @include abstracts.screen(xl) {
+            flex-grow: 1;
+        }
+
+        &--seperate {
+            width: 1px;
+            height: 35px;
+            background: #d2d1d6;
+            margin: 0 14px;
+        }
+
+        &-arrow {
+            filter: var(--filter-form-icon-color);
+        }
+    }
+
+    &__tags {
+        @extend %itemFlexCenter;
+        gap: 20px;
+
+        @include abstracts.screen(sm) {
+            gap: 10px;
+        }
+    }
+
+    &__tag {
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: var(--form-tag-bg-color);
+
+        color: var(--secondary-color-secondary-2, #9e9da8);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142%;
     }
 }

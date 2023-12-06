@@ -1,6 +1,6 @@
 html.dark {
     --header-bg-color: #171c28;
-    --body-bg-color: #292E39;
+    --body-bg-color: #292e39;
     --footer-bg-color: #171c28;
 
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
@@ -12,80 +12,88 @@ html.dark {
     --top-act__btn-shadow: rgba(0, 0, 0, 0.2);
 
     //Dropdown
-    --dropdown__inner-bg: #292E39;
-    --dropdown__shadow: rgba(23, 28, 40, 0.40);
-    --dropdown-arrow: brightness(0) saturate(100%) invert(40%) sepia(14%) saturate(466%) hue-rotate(182deg) brightness(93%) contrast(93%);
-
-
+    --dropdown__inner-bg: #292e39;
+    --dropdown__shadow: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow: brightness(0) saturate(100%) invert(40%) sepia(14%)
+        saturate(466%) hue-rotate(182deg) brightness(93%) contrast(93%);
 
     //Top-menu
-    --top-menu__border-color: #171C28;
-    --top-menu__text-color: #B9BABE;
+    --top-menu__border-color: #171c28;
+    --top-menu__text-color: #b9babe;
 
     //Navbar Responsive
     --navbar-background-color-responsive: #292e39;
-    --navbar-text-responsive: #B9BABE;
-    --navbar-shadow-responsive: rgba(23, 28, 40, 0.40);
-    --navbar__icon-responsive: brightness(0) saturate(100%) invert(91%) sepia(5%) saturate(176%) hue-rotate(191deg) brightness(84%) contrast(83%);
+    --navbar-text-responsive: #b9babe;
+    --navbar-shadow-responsive: rgba(23, 28, 40, 0.4);
+    --navbar__icon-responsive: brightness(0) saturate(100%) invert(91%)
+        sepia(5%) saturate(176%) hue-rotate(191deg) brightness(84%)
+        contrast(83%);
 
     //Home
-    --home__heading-text-color: #FFFFFF;
-    --home__item-bg-color: #171C28;
-    --home__item-thumb-bg-color: #292E39;
-    --home__item-name-color: #FFFFFF;
-    --home__item-desc-color: #FFFFFF;
-    --home__item-bg-responsive: #171C28;
+    --home__heading-text-color: #ffffff;
+    --home__item-bg-color: #171c28;
+    --home__item-thumb-bg-color: #292e39;
+    --home__item-name-color: #ffffff;
+    --home__item-desc-color: #ffffff;
+    --home__item-bg-responsive: #171c28;
 
-     //Buttons
-     --filter-btn-color: #D2D1D6;
-     --filter-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(123%) hue-rotate(212deg) brightness(90%) contrast(87%);
-     --filter-btn-bg-color: #171C28;
-     --love-btn-shadow: rgba(124, 124, 124, 0.20); 
-     --love-btn-bg-color: #292E39;
+    //Buttons
+    --filter-btn-color: #d2d1d6;
+    --filter-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%)
+        saturate(123%) hue-rotate(212deg) brightness(90%) contrast(87%);
+    --filter-btn-bg-color: #171c28;
+    --love-btn-shadow: rgba(124, 124, 124, 0.2);
+    --love-btn-bg-color: #292e39;
 
     //Product items
-    --product-items-bg-color:#171C28;
-    --product-items-shadow: rgba(0, 0, 0, 0.20);
+    --product-items-bg-color: #171c28;
+    --product-items-shadow: rgba(0, 0, 0, 0.2);
     --product-items-text-color: #fff;
-    --product-love-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(348%) hue-rotate(202deg) brightness(117%) contrast(100%);
+    --product-love-icon-color: brightness(0) saturate(100%) invert(100%)
+        sepia(0%) saturate(348%) hue-rotate(202deg) brightness(117%)
+        contrast(100%);
 
     //Filter form
-    --filter-bg-color: #292E39;
-    --filter-shadow: rgba(0, 0, 0, 0.40);
+    --filter-bg-color: #292e39;
+    --filter-shadow: rgba(0, 0, 0, 0.4);
     --filter-label-color: #fff;
-    --filter-tag-bg-color: #171C28;
+    --form-tag-bg-color: #171c28;
     --filter-text-color: #fff;
-    --filter-input-bg-color: #292E39;
-    --filter-form-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%) contrast(101%);
-    --filter-arrow-down-icon: brightness(0) saturate(100%) invert(13%) sepia(3%) saturate(4321%) hue-rotate(184deg) brightness(97%) contrast(85%);
+    --filter-input-bg-color: #292e39;
+    --filter-form-icon-color: brightness(0) saturate(100%) invert(100%)
+        sepia(0%) saturate(0%) hue-rotate(163deg) brightness(105%)
+        contrast(101%);
+    --filter-arrow-down-icon: brightness(0) saturate(100%) invert(13%) sepia(3%)
+        saturate(4321%) hue-rotate(184deg) brightness(97%) contrast(85%);
 
     //Footer
     --footer-text-color: #fff;
-    --footer-input-border-color: #D2D1D6;
-    --footer-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7483%) hue-rotate(102deg) brightness(100%) contrast(96%);
+    --footer-input-border-color: #d2d1d6;
+    --footer-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7483%) hue-rotate(102deg) brightness(100%) contrast(96%);
 
     //Author
-    --author-text-color: #B9BABE;
-    --author-intro-bg-color: #171C28;
-    --author-content-bg-color: #292E39;
-    --author-input-bg-color: #292E39;
-    --author-btn-google-bg-color:#B9BABE;
-    --author-btn-google-color: #B9BABE;
-    --author-btn-google-img-color: brightness(0) saturate(100%) invert(68%) sepia(41%) saturate(0%) hue-rotate(82deg) brightness(99%) contrast(97%);
+    --author-text-color: #b9babe;
+    --author-intro-bg-color: #171c28;
+    --author-content-bg-color: #292e39;
+    --author-input-bg-color: #292e39;
+    --author-btn-google-bg-color: #b9babe;
+    --author-btn-google-color: #b9babe;
+    --author-btn-google-img-color: brightness(0) saturate(100%) invert(68%)
+        sepia(41%) saturate(0%) hue-rotate(82deg) brightness(99%) contrast(97%);
     --author-checkbox-checked: #fff;
-    --author-checkbox-checked-bg: #292E39;
+    --author-checkbox-checked-bg: #292e39;
 
     //Reset password
     --reset-password-success: #10ff10a3;
 
     //Product page
-      --product-page-bg-color: #292E39;
-      --product-page-text-color: #fff;
-      --product-page-tag: #292E39;
+    --product-page-bg-color: #292e39;
+    --product-page-text-color: #fff;
+    --product-page-tag: #292e39;
 
     //Breadcrumb
-    --breadcrumb-bg-color: #171C28;
-    --breadcrumb-shadow: rgba(23, 28, 40, 0.20);
-    --breadcrumb-link-current-color: #fff;  
-
+    --breadcrumb-bg-color: #171c28;
+    --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
+    --breadcrumb-link-current-color: #fff;
 }

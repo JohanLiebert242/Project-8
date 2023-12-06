@@ -104,7 +104,7 @@
        <!-- Body -->
         <main class="product-page">
             <div class="container">
-                <div class="product-page__container">
+                <div class="product__container">
                     <!-- Product-page Search -->
                     <div class="product-page__search d-none d-sm-flex">
                         <input placeholder="Search for item" type="text" name="" id="" class="product-page__search-input">
@@ -130,86 +130,70 @@
                         </li>
                     </ul>
 
-<!-- 
-                    <div class="product-page__body">
-                        <section class="product-page__media">
-                            <img src="./assets/image/category-home/home-product-1.png" alt="" class="product-page__media-thumb">
-                        </section>
-                        <section class="product-page__info">
-                            <h1 class="product-page__info-heading">Coffee Beans - Espresso Arabica and Robusta Beans</h1>
-                            <div class="product-page__content"> -->
-                                 <!-- Filter Col -->
-                               <!-- <div class="product-page__content-col">
-                                <div class="product-page__content-review">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-page__content-review-icon">
-                                    <span class="product-page__content-review-title">(3.5) 1100 reviews</span>
-                                </div>
-                                <label
-                                for=""
-                                class="filter__form__label"
-                                >Size/Weight</label>
-                            <div class="filter__form__select-wrap product-page-filter">
-                                <div class="filter__form__select" style="--filter-select-width: 121px;">
-                                500g
-                                <img src="./assets/icons/filter-arrow-down.svg" alt="" class="filter__form__select-arrow">
-                                </div>
-                                <div class="filter__form__select--seperate"></div>
-                                <div class="filter__form__select">
-                                    Gram
-                                    <img src="./assets/icons/filter-arrow-down.svg" alt="" class="filter__form__select-arrow">
-                                </div>
-                            </div>
-
-                                <div class="filter__form__tags">
-                                    <button class=" btn--text filter__form__tag product-page__tag">Small</button>
-                                    <button class=" btn--text filter__form__tag product-page__tag">Medium</button>
-                                    <button class=" btn--text filter__form__tag product-page__tag">Large</button>
-                                </div>
-                                </div>  -->
-
-                                <!-- Content Col -->
-                                <!-- <div class="product-page__content-col product-page__content-col--activity">
-                                    <div class="product-page__content-row">
-                                        <img src="./assets/icons/product-page/document.svg" alt="" class="product-page__content-icon">
-                                        <span class="product-page__content-title">Compare</span>
-                                    </div>
-
-                                    <div class="product-page__content-row">
-                                        <img src="./assets/icons/buy.svg" alt="" class="product-page__content-icon">
-                                        <div class="product-page__content-title-wrapper">
-                                            <span class="product-page__content-title">Delivery</span>
-                                            <span class="product-page__content-note">From $6 for 1-3 days</span>
+                    <!-- Product-page Content -->
+                    <div class="product__body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="product-preview">
+                                    <div class="product-preview__list">
+                                        <div class="product-preview__item">
+                                            <img src="./assets/image/category-home/home-product-1.png" alt="" class="product-preview__item-img">
+                                        </div>
+                                        <div class="product-preview__item">
+                                            <img src="./assets/image/category-home/home-product-2.png" alt="" class="product-preview__item-img">
+                                        </div>
+                                        <div class="product-preview__item">
+                                            <img src="./assets/image/category-home/home-product-3.png" alt="" class="product-preview__item-img">
+                                        </div>
+                                        <div class="product-preview__item">
+                                            <img src="./assets/image/category-home/home-product-4.png" alt="" class="product-preview__item-img">
                                         </div>
                                     </div>
 
-                                    <div class="product-page__content-row">
-                                        <img src="./assets/icons/product-page/pick-up.svg" alt="" class="product-page__content-icon">
-                                        <div class="product-page__content-title-wrapper">
-                                            <span class="product-page__content-title">Pickup</span>
-                                            <span class="product-page__content-note">Out of 2 store, today</span>
-                                        </div>
-                                    </div> -->
-
-                                    <!-- Action Col -->
-                                    <!-- <div class="product-page__content-row product-page__content-row--act">
-                                        <div class="product-page__content-title-wrapper product-page__content-title-wrapper--act">
-                                            <span class="product-page__content-title ">$500.00</span>
-                                            <img src="./assets/icons/product-page/sale.svg" alt="">
-                                        </div>
-                                        <span class="product-page__content-title product-page__content-title--act">$540.00</span>
-                                        <div class="product-page__content-act">
-                                            <button class="btn btn--primary btn--">Add to cart</button>
-                                            <button class="btn--outline">
-                                                <img src="./assets/icons/heart.svg" alt="">
-                                            </button>
-                                        </div>
-                                    </div> -->
+                                    <div class="product-preview__thumbs">
+                                        <img src="./assets/image/category-home/home-product-1.png" alt="" class="product-preview__thumbs-img current">
+                                        <img src="./assets/image/category-home/home-product-2.png" alt="" class="product-preview__thumbs-img">
+                                        <img src="./assets/image/category-home/home-product-3.png" alt="" class="product-preview__thumbs-img">
+                                        <img src="./assets/image/category-home/home-product-4.png" alt="" class="product-preview__thumbs-img">
+                                    </div>
                                 </div>
                             </div>
-                        </section>
+                            
+                            <div class="col-7">
+                                <div class="product-info">
+                                    <h1 class="product-info__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h1>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="product-property">
+                                                    <img src="./assets/icons/star.svg" alt="" class="product-property-icon">
+                                                    <span class="product-property-title">(3.5) 1100 reviews</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="product-property">
+                                                    <img src="./assets/icons/product-page/document.svg" alt="" class="product-property-icon">
+                                                    <span class="product-property-title"></span>
+                                                </div>
+                                                <div class="product-property">
+                                                    <img src="./assets/icons/buy.svg" alt="" class="product-property-icon">
+                                                    <div class="product-property__action">
+                                                        <span class="product-property__action-title"></span>
+                                                        <p class="product-property__action-desc"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="product-property">
+                                                    <img src="/assets/icons/product-page/pick-up.svg" alt="" class="product-property-icon">
+                                                    <div class="product-property__action">
+                                                        <span class="product-property__action-title"></span>
+                                                        <p class="product-property__action-desc"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-
                 </div>
             </div>
         </main>
