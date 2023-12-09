@@ -25,7 +25,6 @@
            font-weight: 500;
            line-height:  150%;
 
-
            &::placeholder {
                 color: #9E9DA8;
                 font-size: 1.4rem;
@@ -40,15 +39,27 @@
     } 
 }
 
+.product__body {
+    margin-top: 30px;
+}
+
 .product-preview {
     padding: 0 30px;
 
-  
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 0;
+    }
+
     &__list {
         display: flex;
         overflow: hidden;
-    }
 
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
+    }
 
     &__item {
         position: relative;
@@ -73,6 +84,15 @@
         gap: 30px;
         padding: 30px;
 
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        @include abstracts.screen(md) {
+            display: none !important;
+        }
+
         &-img {
             width: 65px;
             height: 65px;
@@ -94,7 +114,169 @@
             }
         }
     }
+}
 
-  
+.product-info {
+    padding: 60px;
+    background: #F6F6F6;
 
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 30px;
+    }
+
+    &__heading {
+        color: var(--secondary-color-secondary-1, #1A162E);
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+        margin-bottom: 30px;
+
+        @include abstracts.screen(sm) {
+            font-size: 1.8rem;
+            line-height: 144.444%;
+            font-weight: 700;
+        }
+
+    }
+
+    &__label {
+        display: block;
+        margin-top: 30px;
+    }
+
+    &__select-wrap {
+        margin: 20px 0;
+    }
+
+    &__tags {
+        @include abstracts.screen(xl) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__tag {
+        background: #EDEDF6;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 27px;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid #B9BABE;
+        min-width: 278px;
+
+        @include abstracts.screen(lg) {
+            max-width: 400px;
+        }
+
+        &-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+       &-initial-price {
+            color: #000;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height:  150%;
+       }
+
+       &-discount {
+            color: var(--green-green, #67B044);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+            padding: 2px 8px;
+            background: #e1efdb;
+       }
+
+       &-main-price {
+        color: #000;
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+       }
+
+       &-bottom {
+            display: flex;
+            gap: 19px;
+       }
+
+       &-button {
+            min-width: 213px;
+       }
+
+       &-favorite-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--secondary-color-secondary-3, #D2D1D6);
+       }
+
+    }
+}
+
+.product-properties {
+    padding-left: 30px;
+
+    @include abstracts.screen(xxl) {
+        padding-left: 10px;
+    }
+}
+
+.product-property {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    &-title {
+        color: var(--secondary-color-secondary-1, #1A162E);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+
+    }
+
+    &__action {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+     & + & {
+        margin-top: 27px;
+    }
+
+    &__action {
+
+        &-title {
+            color: var(--secondary-color-secondary-1, #1A162E);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &-desc {
+            color: var(--secondary-color-secondary-1, #1A162E);
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 142.857%;
+        }
+    }
+   
 }

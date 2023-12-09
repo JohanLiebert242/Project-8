@@ -27,6 +27,11 @@
         line-height:  150%;
         white-space: nowrap;
 
+        @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+            line-height:  142.857%;
+        }
+
         &--current {
             color: var(--breadcrumb-link-current-color);
         }
