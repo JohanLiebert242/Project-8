@@ -3,14 +3,8 @@
 
 .footer {
     background: var(--footer-bg-color);
-    margin-top: 40px;
     padding: 30px 50px;
     font-size: 1.4rem;
-
-
-    @include abstracts.screen(md) {
-        padding: 0;
-     }
 
     &__btn {
         height: 37px !important;

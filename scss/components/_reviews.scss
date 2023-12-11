@@ -1,0 +1,123 @@
+@use "../abstracts";
+@use "../layouts";
+@use "../theme";
+
+.reviews {
+    padding-bottom: 30px;
+
+    &-links {
+        @extend %itemFlexCenter;
+        gap: 60px;
+        margin-bottom: 30px;
+    }
+
+    &-link {
+        color: #9E9DA8;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height:  145.455%;
+
+        &.current {
+            color: var( --reviews-link-current-color);
+        }
+    }
+
+    &__heading {
+        color: var(--reviews-heading-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+    }
+
+    &__card {
+        padding: 30px;
+        border-radius: 16px;
+        background: var(--reviews-card-bg);
+
+        &:hover {
+            translate: 0 -10px;
+            transition: translate .3s ease;
+        }
+
+        &-reviewer {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            @include abstracts.screen(xl) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-info {
+
+            @include abstracts.screen(xl) {
+                text-align: center;
+            }
+        }
+
+        &-thumb {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        &-name {
+            color: var(--reviews-card-name);
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            color: var(--reviews-card-desc);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        &-stars {
+            display: flex;
+            gap: 8px;
+        }
+
+        &-star {
+            @include abstracts.screen(xl) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &-point {
+            @extend %itemFlexCenter;
+            gap: 20px;
+        }
+
+        &-rate {
+            color: var(--reviews-card-rate);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(xl) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}

@@ -91,9 +91,28 @@ html.dark {
     --product-page-bg-color: #292e39;
     --product-page-text-color: #fff;
     --product-page-tag: #292e39;
+    --product-info-bg: #171C28;
+    --product-info-heading-color: #eee;
+    --product-info-card-initial-price: #eee;
+    --product-info-card-main-price: #eee;
+    --product-info-tag-bg: #292E39;
+    --product-info-tag-bg-hover: #FFB700;
+    --product-property-title-color: #EEE;
+    --product-property-desc-color: #eee;
+    --product-info-card-button: #eee;
+
 
     //Breadcrumb
     --breadcrumb-bg-color: #171c28;
     --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
     --breadcrumb-link-current-color: #fff;
+
+    //Reviews
+    --reviews-link-current-color: #fff;
+    --reviews-heading-color: #fff;
+    --reviews-card-bg: #171C28;
+    --reviews-card-name: #fff;
+    --reviews-card-desc: #fff;
+    --reviews-card-rate: #fff;
+
 }

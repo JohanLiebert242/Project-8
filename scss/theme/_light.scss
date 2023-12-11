@@ -1,7 +1,14 @@
+@use "../abstracts";
+
 html {
     --header-bg-color: #eee;
     --body-bg-color: #f5f5f6;
     --footer-bg-color: #eee;
+
+    @include abstracts.screen(md) {
+        --header-bg-color: #fff;
+        --footer-bg-color: #fff;
+    }
 
     --icon-color: brightness(0) saturate(100%) invert(10%) sepia(13%)
         saturate(2112%) hue-rotate(210deg) brightness(97%) contrast(100%);
@@ -80,12 +87,42 @@ html {
 
     //Product page
     --product-page-bg-color: #fff;
+    @include abstracts.screen(md) {
+        --product-page-bg-color: #f8f8fd;
+    }
+
     --product-page-text-color: #1A162E;
     --product-page-tag: #EDEDF6;
+    --product-info-bg: #f6f6f6;
+    --product-info-heading-color: #1A162E;
+    --product-info-card-initial-price: #1A162E;
+    --product-info-card-main-price: #1A162E;
+    --product-info-card-button: #1A162E;
+    --product-info-tag-bg: #EDEDF6;
+    --product-info-tag-bg-hover: #000;
+    --product-property-title-color: #1A162E;
+    --product-property-desc-color: #1A162E;
+
+    @include abstracts.screen(md) {
+        --breadcrumb-bg-color: #fff;
+    }
 
     //Breadcrumb
     --breadcrumb-bg-color: #F6F6F6;
+    @include abstracts.screen(md) {
+        --breadcrumb-bg-color: #fff;
+    }
+
     --breadcrumb-shadow: rgba(237, 237, 246, 0.20);
     --breadcrumb-link-current-color: #1A162E;
+
+
+    //Reviews
+    --reviews-link-current-color: #1A162E;
+    --reviews-heading-color: #1A162E;
+    --reviews-card-bg: #FAFAFD;
+    --reviews-card-name: #1A162E;
+    --reviews-card-desc: #1A162E;
+    --reviews-card-rate: #1A162E;
 
 }
