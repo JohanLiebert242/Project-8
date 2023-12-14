@@ -106,9 +106,11 @@
             <div class="container">
                 <div class="product__container">
                     <!-- Product-page Search -->
-                    <div class="product-page__search d-none d-md-flex">
-                        <input placeholder="Search for item" type="text" name="" id="" class="product-page__search-input">
-                        <img src="./assets/icons/search.svg" alt="" class="product-page__search-icon icon">
+                    <div class="search-bar d-none d-md-flex">
+                        <input placeholder="Search for item" type="text" name="" id="" class="search-bar__input">
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
+                        </button>
                     </div>
 
                     <!-- Breadcrumb -->
@@ -242,88 +244,721 @@
                         <div class="reviews-links">
                             <a href="#!" class="reviews-link">Description</a>
                             <a href="#!" class="reviews-link">Features</a>
-                            <a href="#!" class="reviews-link current">Review (1100)</a>
-                            <a href="#!" class="reviews-link">Similar</a>
+                            <a href="#!" class="reviews-link ">Review (1100)</a>
+                            <a href="#!" class="reviews-link current ">Similar</a>
                         </div>
 
-                        <div class="reviews-body">
-                            <h2 class="reviews__heading">What our customers are saying</h2>
-                            <div class="reviews__cards">
-                                <!-- Card 1 -->
-                                <article class="reviews__card">
-                                    <div class="reviews__card-content">
-                                        <div class="reviews__card-reviewer">
-                                            <img src="./assets/image/product-page/product-page-reviews-1.jpg" alt="" class="reviews__card-thumb">
-                                            <div class="reviews__card-info">
-                                                <a href="#!" class="reviews__card-name">Mirai Kuriyama</a>
-                                                <div class="reviews__card-desc">Great product, I love this Coffee Beans </div>
+                        <!--  -->
+                        <div class="reviews__body">
+                            <!-- Review Content -->
+                            <div class="reviews__body-content ">
+                                <h2 class="reviews__heading">What our customers are saying</h2>
+                                <div class="reviews__cards">
+                                    <!-- Card 1 -->
+                                    <article class="reviews__card">
+                                        <div class="reviews__card-content">
+                                            <div class="reviews__card-reviewer">
+                                                <img src="./assets/image/product-page/product-page-reviews-1.jpg" alt="" class="reviews__card-thumb">
+                                                <div class="reviews__card-info">
+                                                    <a href="#!" class="reviews__card-name">Mirai Kuriyama</a>
+                                                    <p class="reviews__card-desc">Great product, I love this Coffee Beans </p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="reviews__card-point">
+                                                <div class="reviews__card-stars">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/half-star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/empty-star.svg" alt="" class="reviews__card-star">
+                                                </div>
+                                                <div class="reviews__card-rate">(3.5) Review</div>
                                             </div>
                                         </div>
+                                    </article>
+    
+                                     <!-- Card 2 -->
+                                     <article class="reviews__card">
+                                        <div class="reviews__card-content">
+                                            <div class="reviews__card-reviewer">
+                                                <img src="./assets/image/product-page/product-page-reviews-2.jpg" alt="" class="reviews__card-thumb">
+                                                <div class="reviews__card-info">
+                                                    <a href="#!" class="reviews__card-name">Soso no Frienren</a>
+                                                    <p class="reviews__card-desc">Awesome Coffee, I love this Coffee Beans</p>
+                                                </div>
+                                            </div>
+                                           <div class="reviews__card-point">
+                                                <div class="reviews__card-stars">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/empty-star.svg" alt="" class="reviews__card-star">
+                                                </div>
+                                                <span class="reviews__card-rate">(3.9) Review</span>
+                                            </div>
+                                        </div>                                   
+                                    </article>
+    
+                                     <!-- Card 3 -->
+                                     <article class="reviews__card">
+                                        <div class="reviews__card-content">
+                                            <div class="reviews__card-reviewer">
+                                                <img src="./assets/image/product-page/product-page-reviews-3.jpg" alt="" class="reviews__card-thumb">
+                                                <div class="reviews__card-info">
+                                                    <a href="#!" class="reviews__card-name">Kaori Miyazono</a>
+                                                    <p class="reviews__card-desc">Bold, rich, aromatic perfection awaits.</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="reviews__card-point">
+                                                <div class="reviews__card-stars">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                    <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
+                                                </div>
+                                                <span class="reviews__card-rate">(5.0) Review</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
 
-                                        <div class="reviews__card-point">
-                                            <div class="reviews__card-stars">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/half-star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/empty-star.svg" alt="" class="reviews__card-star">
-                                            </div>
-                                            <div class="reviews__card-rate">(3.5) Review</div>
-                                        </div>
-                                    </div>
-                                </article>
+                            <!-- Similar Content -->
+                            <div class="body-content reviews__body-content--current">
+                            <div class="home__products row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3"
+                >
+                    <!-- Product 1 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-1.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn love-btn--loved"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >Coffee Beans - Espresso Arabica and
+                                        Robusta Beans</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
-                                 <!-- Card 2 -->
-                                 <article class="reviews__card">
-                                    <div class="reviews__card-content">
-                                        <div class="reviews__card-reviewer">
-                                            <img src="./assets/image/product-page/product-page-reviews-2.jpg" alt="" class="reviews__card-thumb">
-                                            <div class="reviews__card-info">
-                                                <a href="#!" class="reviews__card-name">Soso no Frienren</a>
-                                                <div class="reviews__card-desc">Awesome Coffee, I love this Coffee Beans</div>
-                                            </div>
-                                        </div>
+                    <!-- Product 2 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-2.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button class="product__item--love love-btn">
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--hear-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >Lavazza Coffee Blends - Try the Italian
+                                        Espresso</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$53.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >3.4</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
-                                        <div class="reviews__card-point">
-                                            <div class="reviews__card-stars">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/half-star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/empty-star.svg" alt="" class="reviews__card-star">
-                                            </div>
-                                            <span class="reviews__card-rate">(3.9) Review</span>
-                                        </div>
-                                    </div>                                   
-                                </article>
+                    <!-- Product 3 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-3.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button class="product__item--love love-btn">
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--hear-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >Lavazza - Caffè Espresso Black Tin -
+                                        Ground coffee</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >welikecoffee</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$99.99</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
-                                 <!-- Card 3 -->
-                                 <article class="reviews__card">
-                                    <div class="reviews__card-content">
-                                        <div class="reviews__card-reviewer">
-                                            <img src="./assets/image/product-page/product-page-reviews-3.jpg" alt="" class="reviews__card-thumb">
-                                            <div class="reviews__card-info">
-                                                <a href="#!" class="reviews__card-name">Kaori Miyazono</a>
-                                                <div class="reviews__card-desc">Bold, rich, aromatic perfection awaits.</div>
-                                            </div>
-                                        </div>
+                    <!-- Product 4 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-4.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button class="product__item--love love-btn">
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--hear-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >Qualità Oro Mountain Grown - Espresso
+                                        Coffee Beans</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$38.65</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
-                                        <div class="reviews__card-point">
-                                            <div class="reviews__card-stars">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/half-star.svg" alt="" class="reviews__card-star">
-                                                <img src="./assets/icons/empty-star.svg" alt="" class="reviews__card-star">
-                                            </div>
-                                            <span class="reviews__card-rate">(5.0) Review</span>
-                                        </div>
-                                    </div>
-                                </article>
+                    <!-- Product 5 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-5.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn love-btn--loved"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >BrewMystique - Unveil the magic in every sip.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >BrewMystique</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-6.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >UrbanBuzz - Ignite your urban spirit.
+                                        </a
+                                    >
+                                </h3>
+                                <span class="product__item--brand product__item--brand--error"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                     <!-- Product 7 -->
+                     <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-7.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn love-btn--loved"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >HarmonyHarbor - Find tranquility in each cup.
+                                        </a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                     <!-- Product 8 -->
+                     <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-8.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >VelvetElixir - Indulge in smooth, luxurious coffee bliss.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-9.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >VelvetElixir - Indulge in smooth, luxurious coffee bliss.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-10.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >VelvetElixir - Indulge in smooth, luxurious coffee bliss.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-11.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >VelvetElixir - Indulge in smooth, luxurious coffee bliss.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="col">
+                        <article class="product__item product__item--product-page">
+                            <div class="product__item--wrapper">
+                                <a href="./product-page.html">
+                                    <img
+                                        src="./assets/image/category-home/home-product-12.png"
+                                        alt=""
+                                        class="product__item--thumb"
+                                    />
+                                </a>
+                                <button
+                                    class="product__item--love love-btn"
+                                >
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                        class="product__item--heart-icon icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/red-heart.svg"
+                                        alt=""
+                                        class="love-btn-loved__icon"
+                                    />
+                                </button>
+                            </div>
+                            <div class="product__item--content">
+                                <h3 class="product__item--name">
+                                    <a href="#!"
+                                        >VelvetElixir - Indulge in smooth, luxurious coffee bliss.</a
+                                    >
+                                </h3>
+                                <span class="product__item--brand"
+                                    >Lavazza</span
+                                >
+                                <div class="product__item--info">
+                                    <span class="product__item--price"
+                                        >$47.00</span
+                                    >
+                                    <img
+                                        src="./assets/icons/star.svg"
+                                        alt=""
+                                        class="product__item-star"
+                                    />
+                                    <span class="product__item--number"
+                                        >4.3</span
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>

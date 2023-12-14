@@ -6,9 +6,13 @@
     padding-bottom: 30px;
 
     &-links {
+        margin-left: -30px;
         @extend %itemFlexCenter;
-        gap: 60px;
         margin-bottom: 30px;
+
+        @include abstracts.screen(md) {
+            margin-left: -20px;
+        }
     }
 
     &-link {
@@ -16,6 +20,11 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height:  145.455%;
+        padding: 0 30px;
+
+        @include abstracts.screen(md) {
+            padding: 0 20px;
+        }
 
         @include abstracts.screen(md) {
             font-size: 1.4rem;
@@ -25,6 +34,18 @@
         &.current {
             color: var( --reviews-link-current-color);
         }
+    }
+
+    &__body {
+        
+        &-content {
+            display: none;
+
+            &--current {
+                display: block;
+            }
+        }
+
     }
 
     &__heading {

@@ -9,6 +9,10 @@
     overflow: hidden;
     height: 100%;
 
+    &--product-page {
+        background: var(--product-item-product-page-bg);
+    }
+
     &--wrapper {
         position: relative;
         padding-top: 100%;

@@ -54,6 +54,10 @@ html {
     --product-items-shadow: rgba(237, 237, 246, 0.20);
     --product-items-name-color: #1A162E;
     --product-love-icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%) saturate(1446%) hue-rotate(210deg) brightness(91%) contrast(98%);
+    --product-item-product-page-bg: #f6f6f6;
+        @include abstracts.screen(md) {
+            --product-item-product-page-bg: #fff;
+        }
 
     //Filter form
     --filter-bg-color: #fff; 
@@ -129,6 +133,10 @@ html {
     --reviews-link-current-color: #1A162E;
     --reviews-heading-color: #1A162E;
     --reviews-card-bg: #FAFAFD;
+
+    @include abstracts.screen(md) {
+        --reviews-card-bg: #fff;
+    }
     --reviews-card-name: #1A162E;
     --reviews-card-desc: #1A162E;
     --reviews-card-rate: #1A162E;

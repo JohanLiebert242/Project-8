@@ -46,6 +46,10 @@ html.dark {
     --filter-btn-bg-color: #171c28;
     --love-btn-shadow: rgba(124, 124, 124, 0.2);
     --love-btn-bg-color: #292e39;
+    --product-item-product-page-bg: #171C28;
+        @include abstracts.screen(md) {
+            --product-item-product-page-bg: #171C28;
+        }
 
     //Product items
     --product-items-bg-color: #171c28;
@@ -121,6 +125,8 @@ html.dark {
     --reviews-link-current-color: #fff;
     --reviews-heading-color: #fff;
     --reviews-card-bg: #171C28;
+
+
     --reviews-card-name: #fff;
     --reviews-card-desc: #fff;
     --reviews-card-rate: #fff;
