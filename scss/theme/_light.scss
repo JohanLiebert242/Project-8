@@ -95,6 +95,12 @@ html {
     --product-page-tag: #EDEDF6;
     --product-info-bg: #f6f6f6;
     --product-info-heading-color: #1A162E;
+
+    @include abstracts.screen(md) {
+        --product-info-heading-color: #B9BABE;
+
+    }
+
     --product-info-card-initial-price: #1A162E;
     --product-info-card-main-price: #1A162E;
     --product-info-card-button: #1A162E;
@@ -102,6 +108,8 @@ html {
     --product-info-tag-bg-hover: #000;
     --product-property-title-color: #1A162E;
     --product-property-desc-color: #1A162E;
+    --product-body-bg: #fff;
+    --product-body-shadow: rgba(237, 237, 246, 0.20);
 
     @include abstracts.screen(md) {
         --breadcrumb-bg-color: #fff;

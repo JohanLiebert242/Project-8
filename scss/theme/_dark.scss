@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
     --header-bg-color: #171c28;
     --body-bg-color: #292e39;
@@ -93,13 +95,21 @@ html.dark {
     --product-page-tag: #292e39;
     --product-info-bg: #171C28;
     --product-info-heading-color: #eee;
+
+    @include abstracts.screen(md) {
+        --product-info-heading-color: #B9BABE;
+    }
+
     --product-info-card-initial-price: #eee;
     --product-info-card-main-price: #eee;
+    --product-info-card-button: #1A162E;
     --product-info-tag-bg: #292E39;
     --product-info-tag-bg-hover: #FFB700;
     --product-property-title-color: #EEE;
     --product-property-desc-color: #eee;
-    --product-info-card-button: #eee;
+    --product-body-bg: #171C28;
+    --product-body-shadow: rgba(23, 28, 40, 0.20);
+
 
 
     //Breadcrumb
