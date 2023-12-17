@@ -773,6 +773,14 @@ a {
   }
 }
 
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -2861,6 +2869,111 @@ a {
   display: block;
   height: 100%;
   padding: 0 15px;
+}
+
+.text-content {
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 600;
+}
+.text-content h1 {
+  font-size: 2.6rem;
+}
+.text-content h2 {
+  font-size: 2.4rem;
+}
+.text-content h3 {
+  font-size: 2rem;
+}
+.text-content h4 {
+  font-size: 1.8rem;
+}
+.text-content h5 {
+  font-size: 1.6rem;
+}
+.text-content h6 {
+  font-size: 1.4rem;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content img,
+.text-content p,
+.text-content blockquote,
+.text-content table,
+.text-content ul,
+.text-content ol {
+  margin: 30px 0;
+}
+.text-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+.text-content img + em {
+  display: block;
+  font-style: italic;
+  text-align: center;
+}
+.text-content blockquote {
+  background: rgba(255, 183, 0, 0.5);
+  padding: 20px;
+  border-left: 3px solid #ffb700;
+}
+.text-content blockquote p {
+  margin: 0;
+}
+.text-content hr {
+  border: none;
+  border: 1px solid #ebebeb;
+}
+.text-content a {
+  color: 0;
+}
+.text-content li {
+  position: relative;
+  margin-left: 20px;
+}
+.text-content li::before {
+  content: "";
+  position: absolute;
+  top: 31%;
+  left: -2%;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+}
+.text-content table {
+  border: 1px solid #ebebeb;
+  word-wrap: break-word;
+}
+.text-content table th {
+  padding: 5px;
+  border: 1px solid #ebebeb;
+}
+.text-content table td {
+  padding: 20px;
+  border: 1px solid #ebebeb;
+}
+.text-content code {
+  background: #f9f9f9;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  padding: 0 5px;
 }
 
 .home {
