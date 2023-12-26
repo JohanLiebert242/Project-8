@@ -12,6 +12,7 @@
 
         @include abstracts.screen(md) {
             margin-left: -20px;
+            flex-wrap: wrap;
         }
     }
 
@@ -21,17 +22,16 @@
         font-weight: 500;
         line-height:  145.455%;
         padding: 0 30px;
+        user-select: none;
+        white-space: nowrap;
 
         @include abstracts.screen(md) {
-            padding: 0 20px;
-        }
-
-        @include abstracts.screen(md) {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             margin-top: 20px;
+            padding: 8px 20px;
         }
 
-        &.current {
+        &--current {
             color: var( --reviews-link-current-color);
         }
     }
@@ -54,20 +54,14 @@
         font-weight: 700;
         line-height: 141.667%;
         margin-bottom: 30px;
-    }
 
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 30px;
-
-        @include abstracts.screen(lg) {
-            grid-template-columns: 1fr;
-            row-gap: 30px;
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
         }
     }
 
     &__card {
+        height: 100%;
         padding: 30px;
         border-radius: 16px;
         background: var(--reviews-card-bg);
@@ -77,6 +71,12 @@
             transition: translate .3s ease;
         }
 
+        &-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
         &-reviewer {
             display: flex;
             gap: 20px;
@@ -84,10 +84,14 @@
 
             @include abstracts.screen(xl) {
                 flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
-            @include abstracts.screen(lg) {
+            @include abstracts.screen(md) {
                 flex-direction: row;
+                align-items: initial;
+                text-align: initial;
             }
         }
 
@@ -124,43 +128,30 @@
             line-height: 150%;
         }
 
-        &-stars {
+        &-star--list {
             display: flex;
             gap: 8px;
-        }
-
-        &-star {
-            @include abstracts.screen(xl) {
-                width: 18px;
-                height: 18px;
-            }
-
-            @include abstracts.screen(xl) {
-                width: 24px;
-                height: 24px;
-            }
         }
 
         &-point {
             @extend %itemFlexCenter;
             gap: 20px;
-        
-           
+            margin-top: auto;
+            
+            @include abstracts.screen(xl) {
+                flex-direction: column;
+            }
+
+            @include abstracts.screen(md) {
+                flex-direction: row;
+            }
         }
 
         &-rate {
             color: var(--reviews-card-rate);
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 500;
             line-height: 144.444%;
-
-            @include abstracts.screen(xl) {
-                font-size: 1.5rem;
-            }
-
-            @include abstracts.screen(xl) {
-                font-size: 1.7rem;
-            }
         }
     }
 

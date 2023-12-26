@@ -13,6 +13,11 @@ html.dark {
     --top-act-text-color: #fff;
     --top-act__btn-shadow: rgba(0, 0, 0, 0.2);
 
+    //Header
+    --header-dropdown-bg: #292E39;
+    --header-dropdown-shadow: rgba(23, 28, 40, 0.40);
+    --header-dropdown-title-color: #B9BABE;
+
     //Dropdown
     --dropdown__inner-bg: #292e39;
     --dropdown__shadow: rgba(23, 28, 40, 0.4);
@@ -131,4 +136,7 @@ html.dark {
     --reviews-card-desc: #fff;
     --reviews-card-rate: #fff;
 
+      //Text-content
+      --text-content-color: #fff;
+      --text-content-li-background: #fff;
 }

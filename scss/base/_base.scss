@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -36,7 +40,6 @@ select{
     color: inherit;
     outline: none;
     border: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 a {

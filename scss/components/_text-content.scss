@@ -1,6 +1,16 @@
+@use "../abstracts";
+@use "../theme";
+
 .text-content {
     font-size: 1.6rem;
     line-height: 150%;
+
+
+    &--margin {
+        margin-top: -20px;
+    }
+
+    color: var(--text-content-color);
 
     h1,
     h2,
@@ -64,9 +74,9 @@
     }
 
     blockquote {
-        background: rgba($color: #ffb700, $alpha: 0.5);
+        background: rgba($color: #76dae6, $alpha: 0.1);
         padding: 20px;
-        border-left: 3px solid #ffb700;
+        border-left: 3px solid #76dae6;
 
         p {
             margin: 0;
@@ -76,10 +86,12 @@
     hr {
         border: none;
         border: 1px solid #ebebeb;
+        height: 1.5px;
     }
 
     a {
-        color: blue($color: #000000);
+        color: #0071DC;
+        text-decoration: underline;
     }
 
     li {
@@ -94,8 +106,16 @@
             
             width: 10px;
             height: 10px;
-            background: #000;
+            background: var(--text-content-li-background);
             border-radius: 50%;
+
+            @include abstracts.screen(md) {
+                left: -4%;
+            }
+
+            @include abstracts.screen(sm) {
+                left: -8%;
+            }
         }
     }
 
@@ -116,10 +136,11 @@
 
     code {
         background: #f9f9f9;
+        color: #000;
         font-weight: 400;
         font-size: 1.6rem;
         border-radius: 2px;
-        border: 1px solid #eee;
+        border: 1px solid #8a8787;
         padding: 0 5px;
     }
 }

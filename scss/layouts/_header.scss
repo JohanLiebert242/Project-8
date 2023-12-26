@@ -1,6 +1,7 @@
 @use "../theme";
 @use "../abstracts";
 
+
 %itemFlexCenter {
     display: flex;
     align-items: center;
@@ -241,6 +242,7 @@
     @extend %itemFlexCenter;
     margin-left: auto;
     gap: 20px;
+    position: relative;
 
     @include abstracts.screen(md) {
         margin-left: 0;
@@ -303,4 +305,53 @@
            font-size: 1.5rem !important;
         }
     }
+}
+
+.act-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+
+    &__inner {
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--header-dropdown-bg);
+        box-shadow: 0px 40px 90px 20px var(--header-dropdown-shadow);
+    }
+
+    &__top {
+        @extend %itemFlexCenter;
+        justify-content: space-between;
+    }
+
+    &__title,
+    &__all {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__title {
+        color: var(--header-dropdown-title-color);
+    }
+
+    &__all {
+        color: #0071DC;
+        font-weight: 400;
+    }
+
+}
+
+.cart-preview-item {
+    
+
+    &__thumb-wrap {
+        position: relative;
+        padding-top: 100%; 
+    }
+
+    &__thumb {
+        
+    }
+   
 }

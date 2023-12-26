@@ -18,6 +18,11 @@ html {
     --top-act-text-color: #1a162e;
     --top-act__btn-shadow: rgba(237, 237, 246, 0.2);
 
+    //Header
+    --header-dropdown-bg: #fff;
+    --header-dropdown-shadow: rgba(200, 200, 200, 0.40);
+    --header-dropdown-title-color: #1A162E;
+
 
     // Dropdown
     --dropdown__inner-bg: #fff;
@@ -140,5 +145,10 @@ html {
     --reviews-card-name: #1A162E;
     --reviews-card-desc: #1A162E;
     --reviews-card-rate: #1A162E;
+
+
+    //Text-content
+    --text-content-color: #000;
+    --text-content-li-background: #000;
 
 }
