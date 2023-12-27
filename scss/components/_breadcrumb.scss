@@ -13,6 +13,10 @@
     @include abstracts.screen(md) {
         gap: 16px;
     }
+
+    &--checkout {
+        background: var(--checkout-breadcrumb-bg-color);
+    }
     
 
     &__item {
