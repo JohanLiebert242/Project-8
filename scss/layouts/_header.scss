@@ -311,6 +311,12 @@
     position: absolute;
     top: 60px;
     right: 60px;
+    width: min(500px, 100vw);
+
+    &::before {
+        content: "";
+        position: absolute;
+    }
 
     &__inner {
         padding: 30px;
@@ -322,11 +328,12 @@
     &__top {
         @extend %itemFlexCenter;
         justify-content: space-between;
+        margin-bottom: 20px;
     }
 
     &__title,
     &__all {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         font-weight: 500;
         line-height: 145.455%;
     }
@@ -340,10 +347,62 @@
         font-weight: 400;
     }
 
+    &__list {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        text-align: start;
+
+        border-top: 1px solid #D2D1D6;
+        border-bottom:  1px solid #D2D1D6;
+
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    &__row {
+        @extend %itemFlexCenter;
+        justify-content: space-between; 
+    }
+
+    &__label,
+    &__value {
+        color: var(--Secondary-Color-Secondary-1, #1A162E);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 145.455%;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        &--btn {
+            min-width: 278px;
+        }
+    }
+
+
 }
 
 .cart-preview-item {
-    
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border: 1.5px solid #ebebeb;
+    padding: 10px;
+    border-radius: 10px;
 
     &__thumb-wrap {
         position: relative;
@@ -351,7 +410,27 @@
     }
 
     &__thumb {
-        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        color: var(--header-card-preview-price-color);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height:  142.857%;
+        margin: 14px 0 6px 0;
+    }
+
+    &__price {
+        color: var(--Secondary-Color-Secondary-1, #1A162E);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height:  146.667%;
     }
    
 }
