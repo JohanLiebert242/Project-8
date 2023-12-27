@@ -56,9 +56,6 @@
             }
         }
     }
-
-   
-
 }
 
 .navbar {
@@ -242,7 +239,6 @@
     @extend %itemFlexCenter;
     margin-left: auto;
     gap: 20px;
-    position: relative;
 
     @include abstracts.screen(md) {
         margin-left: 0;
@@ -268,6 +264,10 @@
     &__btn {
         @extend %itemFlexCenter;
         gap: 10px;
+
+        &-wrap {
+            position: relative;
+        }
     }
 
     &__title {
@@ -310,19 +310,34 @@
 .act-dropdown {
     position: absolute;
     top: 60px;
-    right: 60px;
+    right: -40px;
     width: min(500px, 100vw);
+    transition: opacity .5s ease, visibility .5s ease;
 
-    &::before {
-        content: "";
-        position: absolute;
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
     }
 
     &__inner {
+        position: relative;
         padding: 30px;
         border-radius: 20px;
         background: var(--header-dropdown-bg);
         box-shadow: 0px 40px 90px 20px var(--header-dropdown-shadow);
+    }
+    
+    &__arrow {
+        position: absolute;
+        top: -19px;
+        right: 50px;
+        height: 30px;
+        filter: var(--filter-arrow-down-icon);
     }
 
     &__top {
@@ -360,8 +375,8 @@
 
         text-align: start;
 
-        border-top: 1px solid #D2D1D6;
-        border-bottom:  1px solid #D2D1D6;
+        border-top: 1px solid var(--act-dropdown-bottom-border);
+        border-bottom:  1px solid var(--act-dropdown-bottom-border);
 
         margin: 20px 0;
         padding: 20px 0;
@@ -374,7 +389,7 @@
 
     &__label,
     &__value {
-        color: var(--Secondary-Color-Secondary-1, #1A162E);
+        color: var(--act-dropdown-row-color);
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 145.455%;
@@ -382,6 +397,12 @@
         &--bold {
             font-weight: 500;
         }
+    }
+
+    &__seperate {
+        margin: 20px 0;
+        height: 1px;
+        background: var(--act-dropdown-bottom-border);
     }
 
     &__checkout {
@@ -419,7 +440,7 @@
     }
 
     &__title {
-        color: var(--header-card-preview-price-color);
+        color: var(--header-cart-preview-color);
         font-size: 1.4rem;
         font-weight: 400;
         line-height:  142.857%;
@@ -427,7 +448,7 @@
     }
 
     &__price {
-        color: var(--Secondary-Color-Secondary-1, #1A162E);
+        color: var(--header-cart-preview-color);
         font-size: 1.5rem;
         font-weight: 500;
         line-height:  146.667%;
