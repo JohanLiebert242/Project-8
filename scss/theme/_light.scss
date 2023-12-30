@@ -160,5 +160,12 @@ html {
     --checkout-page-bg-color: #f5f5f5;
     --checkout-breadcrumb-bg-color: #fff;
     --checkout-cart-info-bg-color: #fff;
+    --checkout-cart-info-total-bg: #fff;
     --cart-info-shadow: rgba(237, 237, 246, 0.20);
+    --cart-info-total-shadow: rgba(237, 237, 246, 0.20);
+    --cart-info-gift-wrap-shadow: rgba(237, 237, 246, 0.20);
+    --cart-info-gift-wrap-bg: #f1ecfc;
+    --cart-separate-bg: #D2D1D6;
+    --cart-item-text-color: #1A162E;
+    --cart-item-icon-color: brightness(0) saturate(100%) invert(11%) sepia(23%) saturate(1093%) hue-rotate(210deg) brightness(96%) contrast(103%);
 }

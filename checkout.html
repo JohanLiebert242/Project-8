@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,13 +104,13 @@
        <!-- Body -->
         <main class="checkout-page">
             <div class="container">
-                    <!-- Search bar -->
-                    <div class="search-bar d-none d-md-flex">
-                        <input placeholder="Search for item" type="text" name="" id="" class="search-bar__input">
-                        <button class="search-bar__submit">
-                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
-                        </button>
-                    </div>
+                        <!-- Search bar -->
+                        <div class="search-bar search-bar--checkout d-none d-md-flex">
+                            <input placeholder="Search for item" type="text" name="" id="" class="search-bar__input">
+                            <button class="search-bar__submit">
+                                <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon">
+                            </button>
+                        </div>
 
                         <!-- Breadcrumb -->
                        <div class="breadcrumb__wrap">
@@ -127,8 +127,8 @@
 
                    <!-- Checkout Content  -->
                    <div class="checkout__container">
-                        <div class="row">
-                            <div class="col-8">
+                        <div class="row gy-xl-3">
+                            <div class="col-8 col-xl-12 ">
                                 <div class="cart-info">
                                         <div class="cart-info__list">
                                             <!-- Cart Item 1 -->
@@ -144,19 +144,19 @@
                                                         <p class="cart-item__price">
                                                             $47.00 | <span class="cart-item__status">In Stock</span>
                                                         </p>
-                                                        <div class="cart-item__control">
+                                                        <div class="cart-item__control cart-item__control--vertical">
                                                             <div class="cart-item__input">
                                                                 <span>LavAzza</span>
-                                                                <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__arrow">
+                                                                <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__icon">
                                                             </div>
         
                                                             <div class="cart-item__input">
                                                                 <button>
-                                                                    <img src="./assets/icons/minus.svg" alt="">
+                                                                    <img class="cart-item__icon" src="./assets/icons/minus.svg" alt="">
                                                                 </button>
                                                                 <span>1</span>
                                                                 <button>
-                                                                    <img src="./assets/icons/plus.svg" alt="" class="cart-item__arrow">
+                                                                    <img src="./assets/icons/plus.svg" alt="" class="cart-item__icon">
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -194,19 +194,19 @@
                                                         <p class="cart-item__price">
                                                             $53.00 | <span class="cart-item__status">In Stock</span>
                                                         </p>
-                                                        <div class="cart-item__control">
+                                                        <div class="cart-item__control cart-item__control--vertical">
                                                             <div class="cart-item__input">
                                                                 <span>LavAzza</span>
-                                                                <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__arrow">
+                                                                <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__icon">
                                                             </div>
         
                                                             <div class="cart-item__input">
                                                                 <button>
-                                                                    <img src="./assets/icons/minus.svg" alt="">
+                                                                    <img class="cart-item__icon" src="./assets/icons/minus.svg" alt="">
                                                                 </button>
                                                                 <span>2</span>
                                                                 <button>
-                                                                    <img src="./assets/icons/plus.svg" alt="" class="cart-item__arrow">
+                                                                    <img src="./assets/icons/plus.svg" alt="" class="cart-item__icon">
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -244,19 +244,19 @@
                                                     <p class="cart-item__price">
                                                         $38.65 | <span class="cart-item__status">In Stock</span>
                                                     </p>
-                                                    <div class="cart-item__control">
+                                                    <div class="cart-item__control cart-item__control--vertical">
                                                         <div class="cart-item__input">
                                                             <span>LavAzza</span>
-                                                            <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__arrow">
+                                                            <img src="./assets/icons/arrow-down-big.svg" alt="" class="cart-item__icon">
                                                         </div>
     
                                                         <div class="cart-item__input">
                                                             <button>
-                                                                <img src="./assets/icons/minus.svg" alt="">
+                                                                <img class="cart-item__icon" src="./assets/icons/minus.svg" alt="">
                                                             </button>
                                                             <span>1</span>
                                                             <button>
-                                                                <img src="./assets/icons/plus.svg" alt="" class="cart-item__arrow">
+                                                                <img src="./assets/icons/plus.svg" alt="" class="cart-item__icon">
                                                             </button>
                                                         </div>
                                                     </div>
@@ -278,34 +278,40 @@
                                                 </div>
                                             </div>
                                         </article>
-
-                                        <div class="cart-info__seperate"></div>
+                                        <div class="cart-info__seperate d-md-none"></div>
                                         </div>
 
-                                        <div class="cart-info__bottom">
-                                            <div class="cart-info__bottom-left">
-                                                <img src="./assets/icons/arrow-left-checkout.svg" alt="">
-                                                <a href="./index-logined.html">Continue Shopping</a>
-                                            </div>
-                                            <div class="cart-info__bottom-right">
-                                                <div class="cart-info__row">
-                                                    <span class="cart-info__row__label">Subtotal</span>
-                                                    <span class="cart-info__row__label">$191.65</span>
+                                        <div class="cart-info__bottom d-md-none">
+                                            <div class="row">
+                                                <div class="col-8 col-xl-6">
+                                                    <div class="cart-info__bottom-left">
+                                                        <img class="cart-item__icon" src="./assets/icons/arrow-left-checkout.svg" alt="">
+                                                        <a href="./index-logined.html">Continue Shopping</a>
+                                                    </div>
                                                 </div>
-                                                <div class="cart-info__row">
-                                                    <span class="cart-info__row__label">Shipping</span>
-                                                    <span class="cart-info__row__label">$10:00</span>
+
+                                                <div class="col-4 col-xl-6">
+                                                    <div class="cart-info__bottom-right">
+                                                        <div class="cart-info__row">
+                                                            <span class="cart-info__row__label">Subtotal</span>
+                                                            <span class="cart-info__row__label">$191.65</span>
+                                                        </div>
+                                                        <div class="cart-info__row">
+                                                            <span class="cart-info__row__label">Shipping</span>
+                                                            <span class="cart-info__row__label">$10.00</span>
+                                                        </div>
+                                                        <div class="cart-info__seperate"></div>
+                                                        <div class="cart-info__row">
+                                                            <span class="cart-info__row__label cart-info__row__label--large">Total</span>
+                                                            <span class="cart-info__row__label cart-info__row__label--large">$201.65</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="cart-info__seperate"></div>
-                                                <div class="cart-info__row">
-                                                    <span class="cart-info__row__label cart-info__row__label--large">Total</span>
-                                                    <span class="cart-info__row__label cart-info__row__label--large">$201.65</span>
-                                                </div>
-                                            </div>
+                                            </div>  
                                         </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 col-xl-12">
                                 <div class="cart-info__bottom-right cart-info__total">
                                     <div class="cart-info__row">
                                         <span class="cart-info__row__label">Subtotal <span class="cart-info__row__label--normal">(items)</span></span>

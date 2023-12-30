@@ -148,5 +148,13 @@ html.dark {
       --checkout-page-bg-color: #292e39;
       --checkout-breadcrumb-bg-color: #171C28;
       --checkout-cart-info-bg-color: #171C28;
+      --checkout-cart-info-total-bg: #171C28;
       --cart-info-shadow: rgba(23, 28, 40, 0.20);
+      --cart-info-total-shadow: rgba(23, 28, 40, 0.20);
+      --cart-info-gift-wrap-shadow: rgba(23, 28, 40, 0.20);
+      --cart-info-gift-wrap-bg: #292E39;
+      --cart-separate-bg: #565f74;
+      --cart-item-text-color: #B9BABE;
+      --cart-item-icon-color:  brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(918%) hue-rotate(180deg) brightness(78%) contrast(89%);
+
 }
