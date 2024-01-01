@@ -58,17 +58,21 @@
     font-weight: 500;
     border-radius: 6px;
 
+    white-space: nowrap;
+
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
         }
-     
+    }
+
+    &--small {
+        height: 40px;
     }
 
     &--text {
         background: transparent;
         font-weight: 400;
-        color: #9E9DA8;
     }
 
     &--primary {

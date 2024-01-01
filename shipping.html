@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout Page</title>
+        <title>Shipping Page</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon" />
@@ -120,7 +120,13 @@
                                     <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumb__icon">
                                 </li>
                                 <li class="breadcrumb__item">
-                                    <a href="#!" class="breadcrumb__link breadcrumb__link--current">Checkout</a>
+                                    <a href="./checkout.html" class="breadcrumb__link">Checkout</a>
+                                    <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumb__icon">
+
+                                </li>
+
+                                <li class="breadcrumb__item">
+                                    <a href="#!" class="breadcrumb__link breadcrumb__link--current">Shipping</a>
                                 </li>
                             </ul>
                        </div>
@@ -130,6 +136,76 @@
                         <div class="row gy-xl-3">
                             <div class="col-8 col-xl-12 ">
                                 <div class="cart-info">
+                                    <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                    <div class="cart-info__seperate"></div>
+
+                                   <div class="user">
+                                        <div class="user__top">
+                                            <div class="user__top-left">
+                                                <p class="user__top-text">Shipping address</p>
+                                                <p class="user__top-desc">Where should we deliver your order?</p>
+                                            </div>
+                                            <div class="user__top-right">
+                                                <button class="btn btn--primary btn--rounded user__top-btn">
+                                                    <img src="./assets/icons/plus.svg" alt="" class="user__top-img">
+                                                    Add a new address
+                                                </button>
+                                            </div>
+                                        </div>
+    
+                                       <div class="user__controls">
+                                            <div class="user__control">
+                                                        <div class="user__info">
+                                                            <label class="user__control-checkbox" for="user__control-input">
+                                                                <input class="user__control-input" id="user__control-input" type="checkbox">
+                                                            </label>
+            
+                                                            <div class="user__control-left">
+                                                                <p class="user__control-name">Kaori Mizayono</p>
+                                                                <p class="user__control-address">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                                                <ul class="user__control-options">
+                                                                    <li class="user__control-option">Shipping</li>
+                                                                    <li class="user__control-option">Delivery from store</li>
+                                                                    <li class="user__control-option">Cash on Delivery</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                <div class="user__control-right">
+                                                    <button class="user__control-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" class="user__control-img">
+                                                        Edit
+                                                    </button>
+                                                </div>
+                                            </div>
+        
+                                            <div class="user__control">
+                                                <div class="user__info">
+                                                    <label class="user__control-checkbox" for="user__control-input-2">
+                                                        <input class="user__control-input" id="user__control-input-2" type="checkbox">
+                                                    </label>
+    
+                                                    <div class="user__control-left">
+                                                        <p class="user__control-name">Kaori Mizayono</p>
+                                                        <p class="user__control-address">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                                        <ul class="user__control-options">
+                                                            <li class="user__control-option">Shipping</li>
+                                                            <li class="user__control-option">Delivery from store</li>
+                                                            <li class="user__control-option">Cash on Delivery</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                        <div class="user__control-right">
+                                            <button class="user__control-btn">
+                                                <img src="./assets/icons/edit.svg" alt="" class="user__control-img">
+                                                Edit
+                                            </button>
+                                        </div>
+                                    </div>
+                                       </div>
+                                   </div>
+                                    
                                         <div class="cart-info__list">
                                             <!-- Cart Item 1 -->
                                             <article class="cart-item">
@@ -331,7 +407,7 @@
                                         <span class="cart-info__row__label cart-info__row__label--bold">$201.65</span>
                                     </div>
                                     
-                                    <a href="./shipping.html">
+                                    <a href="#!">
                                         <button class="btn btn--rounded btn--primary cart-info__total--btn">Continue to checkout</button>
                                     </a>
                                 </div>

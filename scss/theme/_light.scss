@@ -168,4 +168,10 @@ html {
     --cart-separate-bg: #D2D1D6;
     --cart-item-text-color: #1A162E;
     --cart-item-icon-color: brightness(0) saturate(100%) invert(11%) sepia(23%) saturate(1093%) hue-rotate(210deg) brightness(96%) contrast(103%);
+
+    //Dialog
+    --dialog-content-bg-color: #f5f5f6;
+    --dialog-content-shadow: rgba(237, 237, 246, 0.20);
+    --dialog-text-color: #1A162E;
+    --dialog-cancel-btn-text-color: #1A162E;
 }
